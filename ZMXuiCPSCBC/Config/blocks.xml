@@ -1,0 +1,8 @@
+<ZMXuiCPSCBC name="blocks.xml">
+
+<!--	// SMX // SCore Broadcast - Compatibility Patch -->
+
+		<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='ReadFromContainers']/@value">true</set>
+		<set xpath="/blocks/block[@name='ConfigFeatureBlock']/property[@class='AdvancedRecipes']/property[@name='BroadcastManage']/@value">true</set>
+
+</ZMXuiCPSCBC>
