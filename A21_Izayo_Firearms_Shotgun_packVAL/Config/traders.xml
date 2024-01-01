@@ -1,0 +1,42 @@
+<configs>
+
+	<append xpath="//trader_item_group[@name='groupRangedAll']">
+				<!--	TRAD SG	-->
+			<item name="IZYgunT1TradshotgunModel1887" quality="1,5" />
+			<item name="IZYgunT2TradshotgunM31hunter" quality="1,5" />
+			<item name="IZYgunT2TradshotgunIthacaM37" quality="1,5" />
+			<item name="IZYgunT3TradshotgunM1897" quality="1,5" />
+			<item name="IZYgunT4TradshotgunSPASCV12" quality="1,5" prob="0.2"/>
+				<!--	SUPER SG	-->
+			<item name="IZYgunT1SupershotgunSPSinglebarrelSG" quality="1,5" />
+			<item name="IZYgunT2SupershotgunDoublebarrellong" quality="1,5" />
+			<item name="IZYgunT3SupershotgunBoltactionShotgun" quality="1,5" />
+			<item name="IZYgunT4SupershotgunHexaThunderBuss" quality="1,5" prob="0.2"/>
+				<!--	TAC SG		-->
+			<item name="IZYgunT1TACshotgunCTS1M590S" quality="1,5" />
+			<item name="IZYgunT2TACshotgunM870Police" quality="1,5" />
+			<item name="IZYgunT3TACshotgunM3Super90" quality="1,5" />
+			<item name="IZYgunT4TACshotgunM4Terminator" quality="1,5" prob="0.2"/>
+			<item name="IZYgunT4TACshotgunSPAS12" quality="1,5" prob="0.2"/>
+				<!--	AUTO SG	-->
+			<item name="IZYgunT1AutoshotgunSaiga12G" quality="1,5" />
+			<item name="IZYgunT2AutoshotgunUSAS12" quality="1,5" />
+			<item name="IZYgunT3AutoshotgunAA12a3" quality="1,5" />
+			<item name="IZYgunT4AutoshotgunXM12G" quality="1,5" prob="0.2"/>
+	</append>
+	
+		<!--	AMMO_TRADER	-->
+
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoHP']">
+		<item name="ammoShotgunShellFlechette" count="50,70"/>
+	</append>
+	
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoHP']">
+		<item name="ammoShotgunExplosive" count="20,40"/>
+	</append>
+	
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoAP']">
+		<item name="ammoShotgunSuperpenetratorslug" count="20,40"/>
+	</append>
+
+</configs>	

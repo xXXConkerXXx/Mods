@@ -1,0 +1,17 @@
+<configs>
+	<!-- trader joel -->
+	<set xpath="/traders/trader_info[@id='1']/@open_time">0:01</set>
+	<set xpath="/traders/trader_info[@id='1']/@close_time">23:59</set>
+	<!-- trader bob -->
+	<set xpath="/traders/trader_info[@id='6']/@open_time">0:01</set>
+	<set xpath="/traders/trader_info[@id='6']/@close_time">23:59</set>
+	<!-- trader jen -->
+	<set xpath="/traders/trader_info[@id='2']/@open_time">0:01</set>
+	<set xpath="/traders/trader_info[@id='2']/@close_time">23:59</set>
+	<!-- trader hugh -->
+	<set xpath="/traders/trader_info[@id='7']/@open_time">0:01</set>
+	<set xpath="/traders/trader_info[@id='7']/@close_time">23:59</set>
+	<!-- trader rekt -->
+	<set xpath="/traders/trader_info[@id='8']/@open_time">0:01</set>
+	<set xpath="/traders/trader_info[@id='8']/@close_time">23:59</set>
+</configs>

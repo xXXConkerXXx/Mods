@@ -1,0 +1,10 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+
+IZYgunT1SniperRifleMosinNagant,items,gun,,Mosin Nagant (T1),Mosin Nagant (T1),,,,,,,,,,,,,,
+IZYgunT2SniperRifleM40a3,items,gun,,M40 A3 (T2),M40 A3 (T2),,,,,,,,,,,,,,
+IZYgunT3SniperRifleL96S,items,gun,,L96 (T3),L96 (T3),,,,,,,,,,,,,,
+IZYgunT4SniperRifleHKPSG1,items,gun,,PSG-1 (T4),PSG-1 (T4),,,,,,,,,,,,,,
+IZYgunT1DMRSks,items,gun,,SKS (T1),SKS (T1),,,,,,,,,,,,,,
+IZYgunT2DMRM141,items,gun,,M141 (T2),M141 (T2),,,,,,,,,,,,,,
+IZYgunT3DMRSR110a2,items,gun,,SR-110 A2 (T3),SR-110 A2 (T3),,,,,,,,,,,,,,
+IZYgunT4DMRM21SOCOM,items,gun,,M21-SOCOM (T4),M21 - SOCOM (T4),,,,,,,,,,,,,,

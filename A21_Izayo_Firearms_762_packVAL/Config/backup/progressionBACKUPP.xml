@@ -1,0 +1,38 @@
+<configs>
+
+	<remove xpath="//crafting_skill[@name='craftingRifles']/display_entry"/>
+	
+		<!-- TIER_01 -->
+	<insertAfter xpath="//crafting_skill[@name='craftingRifles']/display_entry[@item='gunRifleT1HuntingRifle']">
+			<display_entry item="IZYgunT1SniperRifleMosinNagant" unlock_level="11,14,18,22,26" />
+			<display_entry item="IZYgunT1DMRSks" unlock_level="11,14,18,22,26" />
+	</insertAfter>
+
+	<insertAfter xpath="//crafting_skill[@name='craftingRifles']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='gunRifleT1HuntingRifle']">	
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="IZYgunT1SniperRifleMosinNagant"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="IZYgunT1DMRSks"/>
+	</insertAfter>
+
+	<insertAfter xpath="//crafting_skill[@name='craftingRifles']/effect_group/passive_effect[@name='CraftingTier' and @tags='gunRifleT1HuntingRifle']">	
+			<passive_effect name="CraftingTier" operation="base_add" level="14,18,22,26,100" value="1,2,3,4,4" tags="IZYgunT1SniperRifleMosinNagant"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="14,18,22,26,100" value="1,2,3,4,4" tags="IZYgunT1DMRSks"/>
+	</insertAfter>
+
+		<!-- TIER_02 -->
+
+	<insertAfter xpath="//crafting_skill[@name='craftingRifles']/display_entry[@item='gunRifleT2LeverActionRifle']">
+			<display_entry item="IZYgunT2SniperRifleM40a3" unlock_level="27,35,43,51,59" />
+			<display_entry item="IZYgunT2DMRSR110a2" unlock_level="27,35,43,51,59" />
+	</insertAfter>
+
+	<insertAfter xpath="//crafting_skill[@name='craftingRifles']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='gunRifleT2LeverActionRifle']">	
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="IZYgunT2SniperRifleM40a3"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="IZYgunT2DMRSR110a2"/>
+	</insertAfter>
+
+	<insertAfter xpath="//crafting_skill[@name='craftingRifles']/effect_group/passive_effect[@name='CraftingTier' and @tags='gunRifleT2LeverActionRifle']">	
+			<passive_effect name="CraftingTier" operation="base_add" level="35,43,51,59,100" value="1,2,3,4,4" tags="IZYgunT2SniperRifleM40a3"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="35,43,51,59,100" value="1,2,3,4,4" tags="IZYgunT2DMRSR110a2"/>
+	</insertAfter>
+		
+</configs>	

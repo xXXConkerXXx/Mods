@@ -1,0 +1,1290 @@
+<configs>
+<append xpath="/items">
+		<!--	MOD BONUS PRICE T1-150 / T2-250 / T3-310 / T4-380 / -->
+
+		<!--	***************************	-->
+		<!--	AMMO556X45	-->
+		<!--	***************************	-->
+		
+<item name="IZYammo556mmBulletBall">
+	<property name="Extends" value="ammo9mmBulletBall"/>
+	<property name="Tags" value="ammo762mm"/>
+	<property name="CustomIcon" value="IZYammo556mmBulletBall"/>
+	<property name="Stacknumber" value="200"/> <!-- STK ammo low -->
+	<property name="EconomicValue" value="9"/>
+	<property name="TraderStageTemplate" value="ammoTier1"/>
+	
+	<effect_group name="ammo556mmBulletBall" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="40" tags="perkDeadEye,perkMachineGunner"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="7" tags="perkDeadEye,perkMachineGunner"/>
+		<passive_effect name="BlockDamage" operation="base_add" value="14" tags="barrelExplosive"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.2"/>
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/><display_value name="dTargetPenetration" value="1"/>
+	</effect_group>
+</item>
+
+<item name="IZYammo556mmArmorpiercing">
+	<property name="Extends" value="ammo9mmBulletBall"/>
+	<property name="Tags" value="ammo762mm"/>
+	<property name="CustomIcon" value="IZYammo556mmArmorpiercing"/>
+	<property name="Stacknumber" value="200"/> <!-- STK ammo low -->
+	<property name="EconomicValue" value="13"/>
+	<property name="TraderStageTemplate" value="ammoTier3"/>
+	
+	<effect_group name="ammo556mmBulletBall" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="47" tags="perkDeadEye,perkMachineGunner"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="8" tags="perkDeadEye,perkMachineGunner"/>
+		<passive_effect name="BlockDamage" operation="base_add" value="15" tags="barrelExplosive"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="wood"/>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.7" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.7"/>
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="2"/><display_value name="dTargetPenetration" value="2"/>
+	</effect_group>
+	
+	<effect_group name="perkPenetrator" tiered="false">
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkDeadEye,perkMachineGunner">
+			<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkDeadEye,perkMachineGunner">
+			<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner">
+			<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkDeadEye,perkMachineGunner">
+			<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	</effect_group>
+	
+</item>
+
+<item name="IZYammo556mmHighPower">
+	<property name="Extends" value="ammo9mmBulletBall"/>
+	<property name="Tags" value="ammo762mm"/>
+	<property name="CustomIcon" value="IZYammo556mmHighPower"/>
+	<property name="Stacknumber" value="200"/> <!-- STK ammo low -->
+	<property name="EconomicValue" value="13"/>
+	<property name="TraderStageTemplate" value="ammoTier2"/>
+	
+	<effect_group name="ammo556mmBulletBall" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="52" tags="perkDeadEye,perkMachineGunner"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="7" tags="perkDeadEye,perkMachineGunner"/>
+		<passive_effect name="BlockDamage" operation="base_add" value="15" tags="barrelExplosive"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="4" tags="wood"/>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkDeadEye,perkMachineGunner"/><display_value name="dTargetArmor" value="-.2"/>
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/><display_value name="dTargetPenetration" value="1"/>
+	</effect_group>
+	
+</item>
+
+
+		<!--	***************************	-->
+		<!--	AssaultRifle_CARBINE_TAC	-->
+		<!--	***************************	-->
+<item name="IZYgunT1assaultrifleTacticalCarbineCAR15">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,shortRange,gun,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="71"/>
+	<property name="Meshfile" value="#@modfolder:Resources/CAR15XM177.unity3d?CAR15XM177.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT1assaultrifleTacticalCarbineCAR15"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="car15xm117_fire"/>
+		<property name="Sound_loop" value="car15xm117_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="car15xm117_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.00091,-.014,.001"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+	</property>
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="60" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="35" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="-7" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.01" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.22" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="365" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="20" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/> <!-- 2.85s -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,.05" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.9" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.9" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".22" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.3" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.8" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".8" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.9" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".9" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="240,540" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="150" tags="EconomicValue"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+		<passive_effect name="WalkSpeed" operation="perc_add" value=".14"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT2assaultrifleTacticalCarbineM4C">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,shortRange,gun,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="71"/>
+	<property name="Meshfile" value="#@modfolder:Resources/M4Cs.unity3d?M4Cs.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT2assaultrifleTacticalCarbineM4C"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier2"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="M4Cs_fire"/>
+		<property name="Sound_loop" value="M4Cs_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="M4Cs_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.00091,-.013,.001"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+	</property>
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="65" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="40" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="6" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.01" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.22" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="395" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="30" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".75" tags="perkMachineGunner"/> <!-- 2.85s -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,.05" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.6" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.6" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".21" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.2" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".7" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.7" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".7" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.9" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".95" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="255,590" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="250" tags="EconomicValue"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".12"/>
+		<passive_effect name="WalkSpeed" operation="perc_add" value=".18"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT3assaultrifleTacticalCarbineSOCmk1">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,shortRange,gun,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="77"/>
+	<property name="Meshfile" value="#@modfolder:Resources/SOCmk1.unity3d?SOCmk1.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT3assaultrifleTacticalCarbineSOCmk1"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="Scarlight_fire"/>
+		<property name="Sound_loop" value="Scarlight_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="Scarlight_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.00002,-.009,-.05"/>
+
+	</property>
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="70" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="45" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="23" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.01" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.22" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="410" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="30" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/> <!-- 2.85s -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,.05" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".2" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.18" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".62" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.68" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".68" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.9" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="290,640" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1.1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="310" tags="EconomicValue"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".18"/>
+		<passive_effect name="WalkSpeed" operation="perc_add" value=".21"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT4assaultrifleTacticalCarbineG36cA1">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,shortRange,gun,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="48"/>
+	<property name="Meshfile" value="#@modfolder:Resources/g36cA1.unity3d?g36cA1.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT4assaultrifleTacticalCarbineG36cA1"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="HK33_fire"/>
+		<property name="Sound_loop" value="HK33_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="HK33_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.0022,-.0101,.29"/>
+		    <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+            <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+	</property>
+	
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="72" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="48" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="25" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.01" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.22" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="415" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="30" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/> <!-- 2.85s -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,.05" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".2" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.16" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".6" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.68" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".68" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.9" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.4" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="360,720" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="380" tags="EconomicValue"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".22"/>
+		<passive_effect name="WalkSpeed" operation="perc_add" value=".24"/>
+	</effect_group>
+</item>
+
+		<!--	***************************	-->
+		<!--	AssaultRifle_BATTLE_CARBINE	-->
+		<!--	***************************	-->
+		
+<item name="IZYgunT1assaultrifleBattleCarbineFNLcal">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,stock,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="48"/>
+	<property name="Meshfile" value="#@modfolder:Resources/FNNcal.unity3d?FNNcal.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT1assaultrifleBattleCarbineFNLcal"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="FNNcal_fire"/>
+		<property name="Sound_loop" value="FNNcal_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="FNNcal_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.00025,.008,.15"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+	</property>
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="90" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="60" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="-4.2" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="340" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="20" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/> <!-- 2.85s -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,.05" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".22" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.3" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.85" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".85" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.9" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".7" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="230,520" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".1" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="150" tags="EconomicValue"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT2assaultrifleBattleCarbineHK33">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,shortRange,sideAttachments,smallTopAttachments,stock,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="6"/>
+	<property name="Meshfile" value="#@modfolder:Resources/HK33.unity3d?HK33.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT2assaultrifleBattleCarbineHK33"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier2"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="HK33_fire"/>
+		<property name="Sound_loop" value="HK33_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="HK33_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="0,.002,.01"/>	
+		
+	</property>
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="90" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="60" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="7.5" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="360" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="25" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/> <!-- 2.85s -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,.05" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".22" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.25" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".9" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.85" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".85" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.9" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".8" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="225,500" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".1" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="250" tags="EconomicValue"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT3assaultrifleBattleCarbineAKWa2">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,stock,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="48"/>
+	<property name="Meshfile" value="#@modfolder:Resources/AKWa2.unity3d?AKWa2.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT3assaultrifleBattleCarbineAKWa2"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="AKWa2_fire"/>
+		<property name="Sound_loop" value="AKWa2_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="AKWa2_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="0,-.007,.25"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+	</property>
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="90" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="65" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="24" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="365" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="30" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/> <!-- 2.85s -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,.05" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.95" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.95" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".22" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.2" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.82" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".82" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.9" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".85" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="300,625" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".1" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="310" tags="EconomicValue"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT4assaultrifleBattleCarbineScarLight">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shortRange,barrelAttachments,magazine,sideAttachments,smallTopAttachments,stock,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="71"/>
+	<property name="Meshfile" value="#@modfolder:Resources/ScarLight.unity3d?ScarLight.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT4assaultrifleBattleCarbineScarLight"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="Scarlight_fire"/>
+		<property name="Sound_loop" value="Scarlight_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="Scarlight_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="0,-.031,.015"/>
+	</property>
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="95" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="65" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="30" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="380" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="30" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".78" tags="perkMachineGunner"/> <!-- 2.85s -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,.05" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.95" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.95" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".22" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.2" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.82" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".82" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.9" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".9" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="300,625" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".1" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="380" tags="EconomicValue"/>
+	</effect_group>
+</item>
+
+		<!--	***************************	-->
+		<!--	LMG-556						-->
+		<!--	***************************	-->
+		
+<item name="IZYgunT1LMGIWINegev">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="48"/>
+	<property name="Meshfile" value="#@modfolder:Resources/NEGEV.unity3d?NEGEV.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT1LMGIWINegev"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="NEGEV_fire"/>
+		<property name="Sound_loop" value="NEGEV_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="NEGEV_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.001,-.0058,.44"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+	</property>
+	
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="60" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="38" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="-7" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.01" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.22" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="360" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="40" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".65" tags="perkMachineGunner"/> <!-- 2.85s -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,.05" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.7" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.7" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".22" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".6" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.7" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".7" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.9" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".9" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="400,800" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="150" tags="EconomicValue"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value="-.11"/>
+		<passive_effect name="WalkSpeed" operation="perc_add" value="-.02"/>
+		
+						<!--	EJECT_SMOKE -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Smokeframes_test">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Smokeframes_test">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Smokeframes_test"/>
+	
+	</effect_group>
+</item>
+		
+<item name="IZYgunT2LMGM249">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="48"/>
+	<property name="Meshfile" value="#@modfolder:Resources/MMG249.unity3d?MMG249.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT2LMGM249"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier2"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="MG249_fire"/>
+		<property name="Sound_loop" value="MG249_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="MG249_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.0001,-.0223,.38"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+	</property>
+	
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="60" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="45" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="6" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.01" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.22" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="440" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="100" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".72" tags="perkMachineGunner"/> <!-- 2.85s -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,.05" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.6" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.6" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".21" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".5" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.7" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".7" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.7" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".96" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="460,880" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="250" tags="EconomicValue"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value="-.08"/>
+		<passive_effect name="WalkSpeed" operation="perc_add" value="-.01"/>
+		
+						<!--	EJECT_SMOKE -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Smokeframes_test">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Smokeframes_test">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Smokeframes_test"/>
+	
+	</effect_group>
+</item>
+
+<item name="IZYgunT3LMGAmeliMG">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="60"/>
+	<property name="Meshfile" value="#@modfolder:Resources/AmeliMG.unity3d?AmeliMG.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT3LMGAmeliMG"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="ameliMG_fire"/>
+		<property name="Sound_loop" value="ameliMG_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="ameliMG_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value=".0005,-.0055,.2"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+	</property>
+	
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="90" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="52" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="12" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.01" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.22" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,0" tags="perkMachineGunner"/>
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="500" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="120" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.1" tags="perkMachineGunner"/> <!-- 2.85s -->
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".19" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.55" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".55" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.1" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="720,1200" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="310" tags="EconomicValue"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value="-.05"/>
+		
+						<!--	EJECT_SMOKE -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Smokeframes_test">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Smokeframes_test">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Smokeframes_test"/>
+	
+	</effect_group>
+</item>
+
+<item name="IZYgunT4LMGHeavy16">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="77"/>
+	<property name="Meshfile" value="#@modfolder:Resources/HEAVY16.unity3d?HEAVY16.Prefab"/>
+	<property name="Material" value="MMachineGunParts"/>
+	<property name="Weight" value="1"/>
+	<property name="CustomIcon" value="IZYgunT4LMGHeavy16"/>
+	
+	<property name="CrosshairOnAim" value="false"/> 
+	<property name="CrosshairUpAfterShot" value="false"/> 
+	
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="IZYammo556mmBulletBall,IZYammo556mmHighPower,IZYammo556mmArmorpiercing"/>
+		<property name="Sound_start" value="car15xm117_fire"/>
+		<property name="Sound_loop" value="car15xm117_fire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="ak47_reload"/>
+		<property name="Sound_end" value="car15xm117_end"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="gunfire_assault_rifle"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_assault_rifle_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+                <property name="triggerEffectTriggerPullDualsense" value="RifleTrigger"/>
+                <property name="triggerEffectTriggerPullXbox" value="PistolTrigger"/>
+                <property name="triggerEffectTriggerShootDualsense" value="MGShoot"/>
+                <property name="triggerEffectTriggerShootXbox" value="PistolShoot"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.00002,-.0222,-.03"/>
+
+	</property>
+	<effect_group name="gunMGT1AK47">
+		<passive_effect name="MaxRange" operation="base_set" value="95" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="60" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="BlockDamage" operation="base_add" value="-3" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="base_add" value="27" tags="perkMachineGunner"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.01" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.22" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="400" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="60" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".9" tags="perkMachineGunner"/> <!-- 2.85s -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="0,.05" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".2" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.19" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".65" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.68" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".68" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.7" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.1" tags="perkMachineGunner"/> <!-- ak47 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="720,1200" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1.1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="380" tags="EconomicValue"/>
+	</effect_group>
+</item>
+
+</append>
+</configs>

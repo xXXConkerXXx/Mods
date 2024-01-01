@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<addnew>
+
+	<append xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']">
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="extendtubeA"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtender']">
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="magazineA"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunDrumMagazineExtender']">
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="drumA"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/item_modifiers/item_modifier[@name='modGunBipod']">
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="bipodA"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunForegrip']">
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="gripA"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunRetractingStock']">
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="stockA"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunChoke']">
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="chokeA"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunDuckbill']">
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="duckbillA"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunBarrelExtender']">
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="HbarrelA"/>
+		</effect_group>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunMuzzleBrake']">
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+			<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="muzzleBA"/>
+		</effect_group>
+	</append>
+	
+</addnew>

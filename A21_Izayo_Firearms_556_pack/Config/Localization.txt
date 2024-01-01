@@ -1,0 +1,22 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+
+IZYammo556mmBulletBall,items,ammo,,5.56x45 Ball,5.56x45 Ball,,,,,,,,,,,,,,
+IZYammo556mmArmorpiercing,items,ammo,,5.56x45 Armor Piercing,5.56x45 Armor Piercing,,,,,,,,,,,,,,
+IZYammo556mmHighPower,items,ammo,,5.56x45 High Power,5.56x45 High Power,,,,,,,,,,,,,,
+IZYgunT1assaultrifleTacticalCarbineCAR15,items,gun,,CAR-15 XM-177 (T1),CAR-15 XM-177 (T1),,,,,,,,,,,,,,
+IZYgunT2assaultrifleTacticalCarbineM4C,items,gun,,M4Ca2 (T2),M4Ca2 (T2),,,,,,,,,,,,,,
+IZYgunT3assaultrifleTacticalCarbineSOCmk1,items,gun,,SOC mark.1 (T3),SOC mark.1 (T3),,,,,,,,,,,,,,
+IZYgunT4assaultrifleTacticalCarbineG36cA1,items,gun,,G36C (T4),G36C (T4),,,,,,,,,,,,,,
+IZYgunT1assaultrifleBattleCarbineFNLcal,items,gun,,FNN LCAL (T1),FNN LCAL (T1),,,,,,,,,,,,,,
+IZYgunT2assaultrifleBattleCarbineHK33,items,gun,,HnK-33 (T2),HnK-33 (T2),,,,,,,,,,,,,,
+IZYgunT3assaultrifleBattleCarbineAKWa2,items,gun,,AKWa2 (T3),AKWa2 (T3),,,,,,,,,,,,,,
+IZYgunT4assaultrifleBattleCarbineScarLight,items,gun,,SKAR-L (T4),SKAR-L (T4),,,,,,,,,,,,,,
+IZYgunT1LMGIWINegev,items,gun,,NEGEV Machinegun (T1),NEGEV Machinegun (T1),,,,,,,,,,,,,,
+IZYgunT2LMGM249,items,gun,,M249 (T2),M249 (T2),,,,,,,,,,,,,,
+IZYgunT3LMGAmeliMG,items,gun,,AMELI Machinegun (T3),AMELI Machinegun (T3),,,,,,,,,,,,,,
+IZYgunT4LMGHeavy16,items,gun,,HEAVY-16 (T4),HEAVY-16 (T4),,,,,,,,,,,,,,
+
+
+
+
+

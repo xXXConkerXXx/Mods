@@ -1,0 +1,112 @@
+<addnew>
+
+	<append xpath="/recipes">
+
+				<!--	TRAD_pistol	-->
+	<recipe name="IZYgunT1PistolBrowningHipower" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
+		<ingredient name="gunHandgunT1PistolParts" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+		<ingredient name="resourceDuctTape" count="2"/>
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceSpring" count="2"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunHandgunT1PistolParts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT2PistolCZ75" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
+		<ingredient name="gunHandgunT1PistolParts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="8"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceSpring" count="3"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunHandgunT1PistolParts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT3PistolP08luger" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
+		<ingredient name="gunHandgunT1PistolParts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="20"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceSpring" count="6"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunHandgunT1PistolParts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+			<!--	TRAD_SMG	-->
+	<recipe name="IZYgunT1SMGVolksmachinegun" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
+		<ingredient name="gunHandgunT1PistolParts" count="1"/>
+		<ingredient name="resourceForgedIron" count="15"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceSpring" count="3"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunHandgunT1PistolParts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT2SMGBerettaM38" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
+		<ingredient name="gunHandgunT1PistolParts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="10"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceSpring" count="3"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunHandgunT1PistolParts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT3SMGSMP40" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
+		<ingredient name="gunHandgunT1PistolParts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="20"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceSpring" count="6"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunHandgunT1PistolParts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+			<!--	TACTICAL_SMG	-->
+	
+	<recipe name="IZYgunT1TacticalSMGARM9a2" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
+		<ingredient name="gunHandgunT1PistolParts" count="1"/>
+		<ingredient name="resourceForgedIron" count="15"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceSpring" count="3"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunHandgunT1PistolParts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT2TacticalSMGSMP5" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
+		<ingredient name="gunHandgunT1PistolParts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="10"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceSpring" count="3"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunHandgunT1PistolParts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT3TacticalSMGSaika9" count="1" craft_area="workbench" tags="learnable,perkGunslinger">
+		<ingredient name="gunHandgunT1PistolParts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="20"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceSpring" count="6"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunHandgunT1PistolParts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+
+	
+	</append>
+
+
+</addnew>

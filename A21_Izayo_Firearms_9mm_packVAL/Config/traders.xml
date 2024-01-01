@@ -1,0 +1,21 @@
+<configs>
+
+		<!--	GUN_TRADER	-->
+		
+	<append xpath="//trader_item_group[@name='groupRangedAll']">
+		<item name="IZYgunT1PistolBrowningHipower" quality="2,5" />
+		<item name="IZYgunT2PistolCZ75" quality="2,5" />
+		<item name="IZYgunT3PistolP08luger" quality="2,5" />
+		<item name="IZYgunT4PistolC96red9" quality="2,5" prob="0.2"/>
+		<item name="IZYgunT1SMGVolksmachinegun" quality="2,5" />
+		<item name="IZYgunT2SMGBerettaM38" quality="2,5" />
+		<item name="IZYgunT3SMGSMP40" quality="2,5" />
+		<item name="IZYgunT4SMGTokarevPP209" quality="2,5" prob="0.2"/>
+		<item name="IZYgunT1TacticalSMGARM9a2" quality="2,5" />
+		<item name="IZYgunT2TacticalSMGSMP5" quality="2,5" />
+		<item name="IZYgunT3TacticalSMGSaika9" quality="2,5" />				
+		<item name="IZYgunT4TacticalSMGCZscorpion" quality="2,5" prob="0.2"/>
+		
+	</append>
+
+</configs>	

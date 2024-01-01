@@ -1,0 +1,59 @@
+<configs>
+
+		<!-- TIER_01 -->
+	<insertAfter xpath="//crafting_skill[@name='craftingMachineGuns']/display_entry[@item='gunMGT1AK47']">
+			<display_entry item="IZYgunT1assaultrifleTacticalCarbineCAR15" unlock_level="11,14,18,22,26" />
+			<display_entry item="IZYgunT1assaultrifleBattleCarbineFNLcal" unlock_level="11,14,18,22,26" />
+	</insertAfter>
+
+	<insertAfter xpath="//crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='gunMGT1AK47']">	
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="IZYgunT1assaultrifleTacticalCarbineCAR15"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="IZYgunT1assaultrifleBattleCarbineFNLcal"/>
+	</insertAfter>
+
+	<insertAfter xpath="//crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[@name='CraftingTier' and @tags='gunMGT1AK47']">	
+			<passive_effect name="CraftingTier" operation="base_add" level="14,18,22,26,100" value="1,2,3,4,4" tags="IZYgunT1assaultrifleTacticalCarbineCAR15"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="14,18,22,26,100" value="1,2,3,4,4" tags="IZYgunT1assaultrifleBattleCarbineFNLcal"/>
+	</insertAfter>
+
+		<!-- TIER_02 -->
+
+	<insertAfter xpath="//crafting_skill[@name='craftingMachineGuns']/display_entry[@item='gunMGT2TacticalAR']">
+			<display_entry item="IZYgunT2assaultrifleTacticalCarbineM4C" unlock_level="27,35,43,51,59" />
+			<display_entry item="IZYgunT2assaultrifleBattleCarbineHK33" unlock_level="27,35,43,51,59" />
+	</insertAfter>
+
+	<insertAfter xpath="//crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='gunMGT2TacticalAR']">	
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="IZYgunT2assaultrifleTacticalCarbineM4C"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="IZYgunT2assaultrifleBattleCarbineHK33"/>
+	</insertAfter>
+
+	<insertAfter xpath="//crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[@name='CraftingTier' and @tags='gunMGT2TacticalAR']">	
+			<passive_effect name="CraftingTier" operation="base_add" level="35,43,51,59,100" value="1,2,3,4,4" tags="IZYgunT2assaultrifleTacticalCarbineM4C"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="35,43,51,59,100" value="1,2,3,4,4" tags="IZYgunT2assaultrifleBattleCarbineHK33"/>
+	</insertAfter>
+		
+		<!-- TIER_03 AND 04 -->
+
+	<insertAfter xpath="//crafting_skill[@name='craftingMachineGuns']/display_entry[@item='gunMGT3M60']">
+			<display_entry item="IZYgunT3assaultrifleTacticalCarbineSOCmk1" unlock_level="80,85,90,95,100" />	
+			<display_entry item="IZYgunT3assaultrifleBattleCarbineAKWa2" unlock_level="80,85,90,95,100" />	
+			<display_entry item="IZYgunT4assaultrifleBattleCarbineScarLight" unlock_level="80,85,90,95,100" />
+			<display_entry item="IZYgunT4assaultrifleTacticalCarbineG36cA1" unlock_level="80,85,90,95,100" />
+	</insertAfter>
+
+	<insertAfter xpath="//crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='gunMGT3M60']">	
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,100" value="1" tags="IZYgunT3assaultrifleTacticalCarbineSOCmk1"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,100" value="1" tags="IZYgunT3assaultrifleBattleCarbineAKWa2"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,100" value="1" tags="IZYgunT4assaultrifleBattleCarbineScarLight"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,100" value="1" tags="IZYgunT4assaultrifleTacticalCarbineG36cA1"/>
+	</insertAfter>
+
+	<insertAfter xpath="//crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[@name='CraftingTier' and @tags='gunMGT3M60']">	
+			<passive_effect name="CraftingTier" operation="base_add" level="85,90,95,100" value="1,2,3,4" tags="IZYgunT3assaultrifleTacticalCarbineSOCmk1"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="85,90,95,100" value="1,2,3,4" tags="IZYgunT3assaultrifleBattleCarbineAKWa2"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="85,90,95,100" value="1,2,3,4" tags="IZYgunT4assaultrifleBattleCarbineScarLight"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="85,90,95,100" value="1,2,3,4" tags="IZYgunT4assaultrifleTacticalCarbineG36cA1"/>
+	</insertAfter>
+	
+</configs>	

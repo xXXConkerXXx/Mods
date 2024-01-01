@@ -1,0 +1,159 @@
+<configs>
+
+<!-- Creates new weapon groups for shotguns  -->
+		<!-- TRAD_SG_GROUP  -->
+	<insertAfter xpath="//lootgroup[@name='groupWeaponsT3_Boomstick']">
+	
+	<lootgroup name="groupWeaponsT1_TRADSG_M1887" count="all" loot_quality_template="QLTemplateT1">
+		<item name="IZYgunT1TradshotgunModel1887"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT2_TRADSG_M31" count="all" loot_quality_template="QLTemplateT2">
+		<item name="IZYgunT2TradshotgunM31hunter"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT2_TRADSG_M37ITC" count="all" loot_quality_template="QLTemplateT2">
+		<item name="IZYgunT2TradshotgunIthacaM37"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_TRADSG_M1897TRENCH" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT3TradshotgunM1897"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_TRADSG_CVAS12" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4TradshotgunSPASCV12"/>
+	</lootgroup>
+	
+		<!-- SUPER_SG_GROUP  -->
+	<lootgroup name="groupWeaponsT1_SUPERSG_SBSHOTGUN" count="all" loot_quality_template="QLTemplateT1">
+		<item name="IZYgunT1SupershotgunSPSinglebarrelSG"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT2_SUPERSG_DBSHOTGUNLONG" count="all" loot_quality_template="QLTemplateT2">
+		<item name="IZYgunT2SupershotgunDoublebarrellong"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_SUPERSG_BOLTSHOTGUN" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT3SupershotgunBoltactionShotgun"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_SUPERSG_HEXATHUNDER" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4SupershotgunHexaThunderBuss"/>
+	</lootgroup>
+	
+		<!-- TAC_SG_GROUP  -->
+	<lootgroup name="groupWeaponsT1_TAC_M590" count="all" loot_quality_template="QLTemplateT1">
+		<item name="IZYgunT1TACshotgunCTS1M590S"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT2_TAC_M870POL" count="all" loot_quality_template="QLTemplateT2">
+		<item name="IZYgunT2TACshotgunM870Police"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_TAC_M3SUPER90" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT3TACshotgunM3Super90"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_TAC_M4TER" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4TACshotgunM4Terminator"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_TAC_SPAS12" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4TACshotgunSPAS12"/>
+	</lootgroup>
+	
+			<!-- AUT_OSG_GROUP  -->
+	<lootgroup name="groupWeaponsT1_AUTO_SAIGA12" count="all" loot_quality_template="QLTemplateT1">
+		<item name="IZYgunT1AutoshotgunSaiga12G"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT2_AUTO_USAS12" count="all" loot_quality_template="QLTemplateT2">
+		<item name="IZYgunT2AutoshotgunUSAS12"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_AUTO_AA12" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT3AutoshotgunAA12a3"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_AUTO_XM12" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4AutoshotgunXM12G"/>
+	</lootgroup>
+		
+
+	</insertAfter>
+
+<!-- Adding new weapon groups to loot groups  -->
+
+	<append xpath="//lootgroup[@name='groupWeaponsT1_Ranged']">	
+		<item group="groupWeaponsT1_TRADSG_M1887"/>
+		<item group="groupWeaponsT1_SUPERSG_SBSHOTGUN"/>
+		<item group="groupWeaponsT1_TAC_M590"/>	
+		<item group="groupWeaponsT1_AUTO_SAIGA12"/>	
+	</append>
+
+	<append xpath="//lootgroup[@name='groupWeaponsT2_Ranged']">	
+		<item group="groupWeaponsT2_TRADSG_M31"/>
+		<item group="groupWeaponsT2_TRADSG_M37ITC"/>
+		<item group="groupWeaponsT2_SUPERSG_DBSHOTGUNLONG"/>
+		<item group="groupWeaponsT2_TAC_M870POL"/>
+		<item group="groupWeaponsT2_AUTO_USAS12"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupWeaponsT3_Ranged']">	
+		<item group="groupWeaponsT3_TRADSG_M1897TRENCH"/>
+		<item group="groupWeaponsT3_SUPERSG_BOLTSHOTGUN"/>
+		<item group="groupWeaponsT3_TAC_M3SUPER90"/>	
+		<item group="groupWeaponsT3_AUTO_AA12"/>	
+	<!-- ooooo TIER4 ooooo  -->		
+		<item group="groupWeaponsT3_TRADSG_CVAS12" prob="0.2"/>
+		<item group="groupWeaponsT3_SUPERSG_HEXATHUNDER" prob="0.2"/>
+		<item group="groupWeaponsT3_TAC_M4TER" prob="0.2"/>		
+		<item group="groupWeaponsT3_TAC_SPAS12" prob="0.2"/>	
+		<item group="groupWeaponsT3_AUTO_XM12" prob="0.2"/>		
+	</append>
+
+<!-- OOO SPECIAL AMMO LOOT OOO  -->
+
+	<append xpath="//lootgroup[@name='twitch_specialammo']">	
+		<item name="ammoShotgunShellFlechette" count="50,80"/>
+		<item name="ammoShotgunExplosive" count="25,50"/>
+		<item name="ammoShotgunSuperpenetratorslug" count="30,60"/>
+	</append>
+
+<!-- OOO QUEST_Reward OOO  -->
+
+	<append xpath="//lootgroup[@name='groupQuestAmmo']">	
+		<item name="ammoShotgunShellFlechette" count="120" loot_prob_template="QuestT1Prob"/>
+		<item name="ammoShotgunSuperpenetratorslug" count="60" loot_prob_template="QuestT2Prob"/>
+		<item name="ammoShotgunExplosive" count="60" loot_prob_template="QuestT3Prob"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']">	
+		<item name="IZYgunT1TradshotgunModel1887"/>
+		<item name="IZYgunT1SupershotgunSPSinglebarrelSG"/>
+		<item name="IZYgunT1TACshotgunCTS1M590S"/>
+		<item name="IZYgunT1AutoshotgunSaiga12G"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT2']">	
+		<item name="IZYgunT2TradshotgunM31hunter"/>
+		<item name="IZYgunT2TradshotgunIthacaM37"/>
+		<item name="IZYgunT2SupershotgunDoublebarrellong"/>
+		<item name="IZYgunT2TACshotgunM870Police"/>
+		<item name="IZYgunT2AutoshotgunUSAS12"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']">	
+		<item name="IZYgunT3TradshotgunM1897"/>
+		<item name="IZYgunT3SupershotgunBoltactionShotgun"/>
+		<item name="IZYgunT3TACshotgunM3Super90"/>
+		<item name="IZYgunT3AutoshotgunAA12a3"/>
+			<!-- ooooo TIER4 ooooo  -->		
+		<item name="IZYgunT4TradshotgunSPASCV12" prob="0.2"/>
+		<item name="IZYgunT4SupershotgunHexaThunderBuss" prob="0.2"/>
+		<item name="IZYgunT4TACshotgunM4Terminator" prob="0.2"/>
+		<item name="IZYgunT4TACshotgunSPAS12" prob="0.2"/>
+		<item name="IZYgunT4AutoshotgunXM12G" prob="0.2"/>
+	</append>
+
+</configs>

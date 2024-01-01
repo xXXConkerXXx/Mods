@@ -1,0 +1,2312 @@
+<configs>
+<append xpath="/items">
+
+<!-- ___________     	 -->
+<!-- TRADSHOTGUN DEFAULT -->
+<!-- ____________		 -->
+
+<item name="IZYgunT1TradshotgunModel1887">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,modGunShotgunTubeExtenderMagazine,sideAttachments,barrelAttachments,reloadPenalty,stock,gun,smallTopAttachments,shortRange,bottomAttachments,attStrength,perkBoomstick,shotgun,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="85"/>
+	<property name="Meshfile" value="#@modfolder:Resources/m1887sg.unity3d?m1887sg.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="CustomIcon" value="IZYgunT1shotgunModel1887"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="1887_fire"/>
+		<property name="Sound_loop" value="1887_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.0001,.008,.04"/>
+	</property>
+
+	<effect_group name="gunShotgunT1DoubleBarrel">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="55" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="5" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".9" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="150" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="0" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="4.3" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="4.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.6" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.6" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.6" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="380,500" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT2TradshotgunM31hunter">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,sideAttachments,barrelAttachments,shortRange,gun,shotgun,smallTopAttachments,stock,bottomAttachments,attStrength,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="5"/>
+	<property name="CustomIcon" value="IZYgunT2shotgunM31hunter"/>
+	<property name="Meshfile" value="#@modfolder:Resources/M31hunterSG.unity3d?Mossbull12.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier2"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="m31_fire"/>
+		<property name="Sound_repeat" value="m31_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value=".001,.0015,.035"/>
+	</property>
+
+	<effect_group name="gunShotgunT2PumpShotgun">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="65" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="8" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="250" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="4" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="4.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="4.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.5" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.7" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="600,900" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+	
+</item>
+
+<item name="IZYgunT2TradshotgunIthacaM37"> <!-- M31 alternative -->
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,sideAttachments,barrelAttachments,gun,shotgun,shortRange,smallTopAttachments,stock,bottomAttachments,attStrength,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="5"/>
+	<property name="CustomIcon" value="IZYgunT2TradshotgunIthacaM37"/>
+	<property name="Meshfile" value="#@modfolder:Resources/ITCM37.unity3d?ITCM37.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier2"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="m37_fire"/>
+		<property name="Sound_repeat" value="m37_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value=".0009,.003,.04"/>
+	</property>
+
+	<effect_group name="gunShotgunT2PumpShotgun">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="65" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="8" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="250" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="4" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="4.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="4.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.5" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.7" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="600,900" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+	
+</item>
+
+<item name="IZYgunT3TradshotgunM1897">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,sideAttachments,barrelAttachments,gun,shotgun,shortRange,smallTopAttachments,stock,bottomAttachments,attStrength,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="5"/>
+	<property name="CustomIcon" value="IZYgunT2shotgunM1897"/>
+	<property name="Meshfile" value="#@modfolder:Resources/M1897.unity3d?M1897.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="M1897_fire"/>
+		<property name="Sound_repeat" value="M1897_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value=".0015,-.0076,.1"/>
+	</property>
+
+	<effect_group name="gunShotgunT2PumpShotgun">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="69" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="12" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.1" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="310" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="14" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="4" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="4" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.8" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="900,1600" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+						<!--	Activate Fakeaim_group -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group"/>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+
+</item>
+
+<item name="IZYgunT4TradshotgunSPASCV12">
+<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,modGunShotgunTubeExtenderMagazine,barrelAttachments,sideAttachments,smallTopAttachments,stock,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="5"/>
+	<property name="CustomIcon" value="IZYgunT4TradshotgunSPASCV12"/>
+	<property name="Meshfile" value="#@modfolder:Resources/SPAS12MANUAL.unity3d?SPAS12MANUAL.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="CVAS12_fire"/>
+		<property name="Sound_repeat" value="CVAS12_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<property name="ScopeOffset" value="-.00062,.088,.065"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value=".0008,-.009,.06"/>
+	</property>
+
+	<effect_group name="gunShotgunT2PumpShotgun">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="70" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="12" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.1" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="380" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="16" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="3.8" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3.8" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.9" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="1000,1800" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+			
+	</effect_group>
+	
+</item>
+
+<!-- _______	_____ -->
+<!-- TRADSHOTGUN SUPER -->
+<!-- ________	____ -->
+
+<item name="IZYgunT1SupershotgunSPSinglebarrelSG">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,stock,reloadPenalty,barrelAttachments,gun,shotgun,shortRange,sideAttachments,smallTopAttachments,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="82"/>
+	<property name="Meshfile" value="#@modfolder:Resources/SBSG.unity3d?SBSG.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="CustomIcon" value="IZYgunT1TradshotgunSPSinglebarrelSG"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="DBshotgun_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.00015,.0026,0"/>
+	</property>
+
+	<effect_group name="gunShotgunT1DoubleBarrel">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="200" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/>
+
+		<passive_effect name="MagazineSize" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="150" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="8" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/> <!-- random DegMax -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> <!-- random APM -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+		<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".05" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="perc_add" value="0,.0"/> <!-- random MagazineSize -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="7" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="8" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.6" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.6" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="300,500" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+		<passive_effect name="WalkSpeed" operation="perc_add" value=".2"/>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT2SupershotgunDoublebarrellong">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,stock,reloadPenalty,barrelAttachments,gun,shotgun,shortRange,sideAttachments,smallTopAttachments,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="82"/>
+	<property name="Meshfile" value="#@modfolder:Resources/DBshotgun1.unity3d?DBshotgun1.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="CustomIcon" value="IZYgunT1shotgunDoublebarrellong"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier2"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="DBshotgun_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="0,.015,0"/>
+	</property>
+
+	<effect_group name="gunShotgunT1DoubleBarrel">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="100" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.1" tags="perkBoomstick"/>
+
+		<passive_effect name="MagazineSize" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="250" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="19" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/> <!-- random DegMax -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> <!-- random APM -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+		<passive_effect name="MagazineSize" operation="perc_add" value="0,.0"/> <!-- random MagazineSize -->
+		<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".05" tags="perkBoomstick"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="7" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="7.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.5" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.1" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="500,800" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+		<passive_effect name="WalkSpeed" operation="perc_add" value=".25"/>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT3SupershotgunBoltactionShotgun">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,stock,shortRange,sideAttachments,barrelAttachments,smallTopAttachments,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedGunNoMag"/>
+	<property name="HoldType" value="30"/>
+	<property name="CustomIcon" value="IZYgunT1shotgunBoltactionShotgun"/>
+	<property name="Meshfile" value="#@modfolder:Resources/boltactionshotgun.unity3d?boltactionshotgun.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="4"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".5"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.66"/>
+		<property name="Sound_start" value="BAshotgun_fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="hunting_rifle_reload"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="0,.0244,.004"/>	
+	</property>
+
+	<effect_group name="gunShotgunT2PumpShotgun">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="43" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".85" tags="perkBoomstick"/>
+
+		<passive_effect name="MagazineSize" operation="base_set" value="5" tags="perkBoomstick"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="310" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="34" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/> <!-- random DegMax -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> <!-- random APM -->
+		<passive_effect name="MagazineSize" operation="perc_add" value="0,.0"/> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+		<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".05" tags="perkBoomstick"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="6.8" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="7" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.2" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.7" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="800,1200" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+		<passive_effect name="WalkSpeed" operation="perc_add" value=".3"/>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+		
+						<!--	FPV_BOLTCYCLE_HAND -->
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="PHFR">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="PHFR">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+	</effect_group>
+</item>
+
+<item name="IZYgunT4SupershotgunHexaThunderBuss">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,sideAttachments,barrelAttachments,shortRange,smallTopAttachments,stock,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="HoldType" value="85"/>
+	<property name="CustomIcon" value="IZYgunT4SupershotgunHexaThunderBuss"/>
+	<property name="Meshfile" value="#@modfolder:Resources/revolvershotgun.unity3d?revolvershotgun.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="2"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+	
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".5"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.5"/>
+		<property name="Sound_start" value="HEXAgun_fire"/>
+		<property name="Sound_loop" value="HEXAgun_fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value=""/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.0003,.012,.03"/>
+	</property>
+
+	<effect_group name="gunShotgunT2PumpShotgun">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="60" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/>
+
+		<passive_effect name="MagazineSize" operation="base_set" value="6" tags="perkBoomstick"/>
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="380" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="36" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkBoomstick"/> <!-- random DegMax -->
+		<passive_effect name="MagazineSize" operation="perc_add" value="0,.0"/> <!-- random MagazineSize -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> <!-- random APM -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+		<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".05" tags="perkBoomstick"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="7" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="8" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.5" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.5" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="800,1300" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+		<passive_effect name="WalkSpeed" operation="perc_add" value=".4"/>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+<!-- _______	_____ -->
+<!-- TACTICAL - SHOTGUN -->
+<!-- ________	____ -->
+
+<item name="IZYgunT1TACshotgunCTS1M590S">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,sideAttachments,barrelAttachments,shortRange,gun,shotgun,smallTopAttachments,bottomAttachments,attStrength,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="5"/>
+	<property name="CustomIcon" value="IZYgunT1TACshotgunCTS1M590S"/>
+	<property name="Meshfile" value="#@modfolder:Resources/CTS1.unity3d?CTS1.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="CTS1_fire"/>
+		<property name="Sound_repeat" value="CTS1_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value=".0011,-.012,.05"/>
+	</property>
+
+	<effect_group name="gunShotgunT1DoubleBarrel">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="65" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="4" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".05" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="150" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="0" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="3.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3.8" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.3" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.3" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.8" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.8" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="200,400" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+						<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+						<!--	Activate Fakeaim_group -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group"/>
+		
+							<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT2TACshotgunM870Police">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,sideAttachments,barrelAttachments,shortRange,gun,shotgun,smallTopAttachments,bottomAttachments,attStrength,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="5"/>
+	<property name="CustomIcon" value="IZYgunT2TACshotgunM870Police"/>
+	<property name="Meshfile" value="#@modfolder:Resources/M870police.unity3d?M870police.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="TraderStageTemplate" value="baseTier2"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="CVAS12_fire"/>
+		<property name="Sound_repeat" value="CVAS12_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<property name="ScopeOffset" value="-.00062,.088,.065"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value=".0003,-.0228,.04"/>
+	</property>
+
+	<effect_group name="gunShotgunT1DoubleBarrel">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="70" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="8" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".05" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="250" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="4" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="3" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3.1" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.2" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.8" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.8" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="400,700" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+							<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+							<!--	Activate Fakeaim_group -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group"/>
+		
+							<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT3TACshotgunM3Super90">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,sideAttachments,barrelAttachments,stock,shortRange,gun,shotgun,smallTopAttachments,bottomAttachments,attStrength,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="5"/>
+	<property name="CustomIcon" value="IZYgunT3TACshotgunM3Super90"/>
+	<property name="Meshfile" value="#@modfolder:Resources/M3shotgun.unity3d?M3shotgun.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="m31_fire"/>
+		<property name="Sound_repeat" value="m31_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value=".0003,-.0319,.1"/>
+	</property>
+
+	<effect_group name="gunShotgunT1DoubleBarrel">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="75" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="10" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1.1" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".05" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="310" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="11" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="2.8" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.2" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.8" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.9" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="700,1100" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+	
+							<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+							<!--	Activate Fakeaim_group -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group"/>
+		
+							<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+	
+</item>
+
+<item name="IZYgunT4TACshotgunM4Terminator">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,sideAttachments,barrelAttachments,stock,shortRange,gun,shotgun,smallTopAttachments,bottomAttachments,attStrength,perkBoomstick,modGunShotgunTubeExtenderMagazine,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="48"/>
+	<property name="CustomIcon" value="IZYgunT4TACshotgunM4Terminator"/>
+	<property name="Meshfile" value="#@modfolder:Resources/M4terminator.unity3d?M4terminator.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="SPAS12GFR_fire"/>
+		<property name="Sound_repeat" value="SPAS12GFR_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value=".0015,-.0087,.32"/>
+	</property>
+
+	<effect_group name="gunShotgunT1DoubleBarrel">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="125" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="10" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="380" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="13" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="2.8" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.2" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.8" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.9" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="800,1200" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+							<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+							<!--	Activate Fakeaim_group -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group"/>
+		
+							<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT4TACshotgunSPAS12">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,modGunShotgunTubeExtenderMagazine,sideAttachments,barrelAttachments,smallTopAttachments,stock,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="48"/>
+	<property name="CustomIcon" value="IZYgunT4TACshotgunSPAS12"/>
+	<property name="Meshfile" value="#@modfolder:Resources/SPAS12GFR.unity3d?SPAS12GFR.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+	
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+	
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="saiga12GL_fire"/>
+		<property name="Sound_loop" value="saiga12GL_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<property name="ScopeOffset" value="-.00062,.088,.065"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.00065,-.0018,.28"/>
+	</property>
+
+	<effect_group name="gunShotgunT1DoubleBarrel">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="125" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="10" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="380" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="13" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="2.8" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2.2" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.8" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.9" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="800,1200" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+							<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+							<!--	Activate Fakeaim_group -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group"/>
+		
+							<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+<!-- _______	_____ -->
+<!-- Automatic Shotgun -->
+<!-- ________	____ -->
+
+<item name="IZYgunT1AutoshotgunSaiga12G">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,drumMagazine,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,firingMode,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="48"/>
+	<property name="CustomIcon" value="IZYgunT1AutoshotgunSaiga12G"/>
+	<property name="Meshfile" value="#@modfolder:Resources/Saiga12G.unity3d?Saiga12G.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="UnlockedBy" value="gunShotgunT3AutoShotgunSchematic"/>
+	<property name="TraderStageTemplate" value="baseTier1"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="saiga12GL_fire"/>
+		<property name="Sound_loop" value="saiga12GL_fire"/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<property name="ScopeOffset" value="-.00062,.088,.065"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.00055,.005,.3"/>
+	</property>
+
+	<effect_group name="gunShotgunT3AutoShotgun">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="92" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="10" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".8" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="150" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="-1" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.085,.085" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="2.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-1.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="1.5" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.8" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.5" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="80,120" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+							<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+								<!--	Activate Fakeaim_group -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT2AutoshotgunUSAS12">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="76"/>
+	<property name="CustomIcon" value="IZYgunT2AutoshotgunUSAS12"/>
+	<property name="Meshfile" value="#@modfolder:Resources/USAS12.unity3d?USAS12.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="UnlockedBy" value="gunShotgunT3AutoShotgunSchematic"/>
+	<property name="TraderStageTemplate" value="baseTier2"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="USAS12L_fire"/>
+		<property name="Sound_loop" value="USAS12L_fire"/>
+		<property name="Sound_end" value="USAS12L_end"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<property name="ScopeOffset" value="-.00062,.088,.065"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value=".002,-.0206,.075"/>
+	</property>
+
+	<effect_group name="gunShotgunT3AutoShotgun">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="115" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="100" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="20" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".8" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="250" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="3" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.085,.085" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="2.2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="2.6" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-1.6" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="1.6" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.8" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.8" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="150,250" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+							<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+								<!--	Activate Fakeaim_group -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT3AutoshotgunAA12a3">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="76"/>
+	<property name="CustomIcon" value="IZYgunT3AutoshotgunAA12a3"/>
+	<property name="Meshfile" value="#@modfolder:Resources/AA12a3.unity3d?AA12a3.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="UnlockedBy" value="gunShotgunT3AutoShotgunSchematic"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="AA12L_fire"/>
+		<property name="Sound_loop" value="AA12L_fire"/>
+		<property name="Sound_end" value="AA12L_end"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<property name="ScopeOffset" value="-.00062,.088,.065"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value=".00175,-.0216,.08"/>
+	</property>
+
+	<effect_group name="gunShotgunT3AutoShotgun">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="160" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="20" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".9" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="310" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="6" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.085,.085" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="2.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-1.5" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="1.5" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.8" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.8" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="250,400" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+									<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+								<!--	Activate Fakeaim_group -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+<item name="IZYgunT4AutoshotgunXM12G">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,shotgun,shortRange,barrelAttachments,sideAttachments,smallTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attStrength,perkBoomstick,attachmentsIncluded,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedShotgun"/>
+	<property name="HoldType" value="76"/>
+	<property name="CustomIcon" value="IZYgunT4AutoshotgunXM12G"/>
+	<property name="Meshfile" value="#@modfolder:Resources/XM12G.unity3d?XM12G.Prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="meleeToolFlashlight02"/>
+
+	<property name="CrosshairOnAim" value="false"/>
+	<property name="CrosshairUpAfterShot" value="false"/>
+
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons,Ranged Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="2500"/>
+	<property name="UnlockedBy" value="gunShotgunT3AutoShotgunSchematic"/>
+	<property name="TraderStageTemplate" value="baseTier3"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="SoundUnholster" value="weapon_unholster"/>
+	<property name="SoundHolster" value="weapon_holster"/>
+	<property name="UnlockedBy" value="craftingShotguns"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoShotgunShell,ammoShotgunSlug,ammoShotgunBreachingSlug,ammoShotgunShellFlechette,ammoShotgunSuperpenetratorslug,ammoShotgunExplosive"/>
+		<property name="Reload_time" value="2.6"/>
+		<property name="Sound_start" value="AA12L_fire"/>
+		<property name="Sound_loop" value="AA12L_fire"/>
+		<property name="Sound_end" value="AA12L_end"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="AutoReload" value="false"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+		<property name="Particles_muzzle_fire_fpv" value="nailgunfire"/>
+		<property name="ScopeOffset" value="-.00062,.088,.065"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.0003,-.008,.03"/>
+	</property>
+
+	<effect_group name="gunShotgunT3AutoShotgun">
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="160" tags="perkBoomstick"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkBoomstick"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="25" tags="perkBoomstick"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkBoomstick"/> <!-- 2.3s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,3,4,5" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".08" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="380" tags="EconomicValue"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="7" tags="perkBoomstick"/> <!-- damage offset -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkBoomstick"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".05,.25" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.08,.08" tags="perkBoomstick"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkBoomstick"/> <!-- tier bonus -->
+		<!-- <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkBoomstick"/> --> <!-- random DegMax -->
+		<!-- <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkBoomstick"/> --> <!-- random APM -->
+		<!-- <passive_effect name="MagazineSize" operation="perc_add" value="-.122,.24"/> --> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.085,.085" tags="perkBoomstick"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1.9" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-1.4" tags="perkBoomstick"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="1.4" tags="perkBoomstick"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.8" tags="perkBoomstick"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="1.9" tags="perkBoomstick"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="300,550" tier="1,6" tags="perkBoomstick"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkBoomstick"/>
+		<display_value name="dStatStunEffect" value="4"/>
+		
+								<!--	Fancy effect like smoke barrel Eject -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Fancy_shits">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Fancy_shits"/>
+		
+								<!--	Activate Fakeaim_group -->		
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStart" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfAimingGunStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="fakeaim_group"/>
+		
+						<!--	MuzzleFlash FPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="Muzzleframes_B"/>
+						<!--	MuzzleLightFPV -->		
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV">
+			<requirement name="!IsFPV"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="MuzzleLightFPV"/>
+	</effect_group>
+</item>
+
+						<!--	AMMO NEW  -->	
+						
+<item name="ammoShotgunExplosive">
+	<property name="Tags" value="ammo,shotgun,ammoShells,explosivesSkill"/>
+	<property name="DisplayType" value="ammoExplosive"/>
+	<property name="CustomIcon" value="ammo12gExplosive"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammohold_12gexplosive"/>
+	<property name="DropMeshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammobox_12GEXPLOSIVE.Prefab"/>
+	<property name="Material" value="MresourceScrapPolymers"/>
+	<property name="MeltTimePerUnit" value=".4"/>
+	<property name="Stacknumber" value="150"/>
+	<property name="EconomicValue" value="60"/>
+	<property name="TraderStageTemplate" value="ammoTier3"/>
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,tmAmmo"/>
+	
+    <property class="Action1">
+        <property name="Class" value="Projectile"/>
+        <property name="Explosion.ParticleIndex" value="#@modfolder:Resources/12G_explosion.unity3d?12G_explosion.Prefab"/>
+		<property name="Explosion.RadiusBlocks" value="2"/>
+		<property name="Explosion.RadiusEntities" value="4"/>
+		<property name="Explosion.BlockDamage" value="50"/>
+		<property name="Explosion.EntityDamage" value="180"/>
+		<property name="Explosion.BlastPower" value="25"/>
+        <property name="Explosion.Duration" value="10"/>	
+		<property name="Explosion.DamageBonus.stone" value="0"/>
+		<property name="Explosion.DamageBonus.metal" value="0"/>
+		<property name="Explosion.DamageBonus.earth" value="0"/>
+		<property name="Explosion.DamageBonus.water" value="0"/>		
+    </property>
+	
+	<effect_group name="ammoShotgunExplosive" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="200" tags="perkDemolitionsExpert"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkDemolitionsExpert"/>
+		<passive_effect name="BlockDamage" operation="base_add" value="1000" tags="door,wood"/>
+		<passive_effect name="RoundRayCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MaxRange" operation="base_set" value="30" tags="perkBoomstick"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="20" tags="perkBoomstick"/>
+		<passive_effect name="BlockPenetrationFactor" operation="base_set" value="51" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.15" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value=".3" tags="perkBoomstick"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+		<passive_effect name="DegradationPerUse" operation="perc_add" value="6"/>	
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.25" tags="perkBoomstick"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="RangedExplosion, CustomParticleLoader" particle_index="#@modfolder:Resources/12G_explosion.unity3d?12G_explosion.Prefab" explode_delay="0"/>		
+	</effect_group>
+</item>
+
+<item name="ammoShotgunShellFlechette">
+	<property name="Tags" value="ammo,shotgun"/>
+	<property name="DisplayType" value="ammoShotgun"/>
+	<property name="CustomIcon" value="ammo12gFlechette"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammohold_12gfletchette"/>
+	<property name="DropMeshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammobox_12GFletchette.Prefab"/>
+	<property name="Material" value="Miron_scrap"/>
+	<property name="Stacknumber" value="150"/> <!-- STK ammo low -->
+	<property name="EconomicValue" value="20"/>
+	<property name="TraderStageTemplate" value="ammoTier2"/>
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+	<effect_group name="ammoShotgunShell" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="35" tags="perkBoomstick"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="5" tags="perkBoomstick"/>
+		<passive_effect name="BlockDamage" operation="base_add" value="10" tags="wood"/>
+		<passive_effect name="RoundRayCount" operation="base_set" value="4" tags="perkBoomstick"/>
+		<passive_effect name="MaxRange" operation="base_set" value="25" tags="perkBoomstick"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="12" tags="perkBoomstick"/>
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="2" tags="perkBoomstick"/>
+		<passive_effect name="BlockPenetrationFactor" operation="base_set" value="51" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.35" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value=".3" tags="perkBoomstick"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="earth"/>
+		
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="2" tags="perkBoomstick"/><display_value name="dTargetPenetration" value="2"/>
+		
+	</effect_group>
+	<effect_group name="Bleeding" tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffInjuryBleedingBarbedWire"/>
+	</effect_group>
+</item>
+
+<item name="ammoShotgunSuperpenetratorslug">
+	<property name="Tags" value="ammo,shotgun"/>
+	<property name="DisplayType" value="ammoShotgun"/>
+	<property name="CustomIcon" value="ammoShotgunSuperpenetratorslug"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammohold_12gsuperP"/>
+	<property name="DropMeshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammobox_12GSUPERP.Prefab"/>
+	<property name="Material" value="Miron_scrap"/>
+	<property name="Stacknumber" value="150"/> <!-- STK ammo low -->
+	<property name="EconomicValue" value="40"/>
+	<property name="TraderStageTemplate" value="ammoTier3"/>
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
+	
+	<property class="Action1">
+        <property name="Class" value="Projectile"/>
+        <property name="Explosion.ParticleIndex" value="#@modfolder:Resources/12GSuperpenetatorEF.unity3d?12GSuperpenetatorEF.Prefab"/>
+		<property name="Explosion.RadiusBlocks" value="0"/>
+		<property name="Explosion.RadiusEntities" value="0"/>
+		<property name="Explosion.BlockDamage" value="250"/>
+		<property name="Explosion.EntityDamage" value="350"/>
+		<property name="Explosion.BlastPower" value="20"/>
+        <property name="Explosion.Duration" value="10"/>		
+    </property>
+	
+	<effect_group name="ammoShotgunSlug" tiered="false">
+		<passive_effect name="EntityDamage" operation="base_set" value="350" tags="perkBoomstick"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="350" tags="perkBoomstick"/>
+		<passive_effect name="BlockDamage" operation="base_add" value="800" tags="wood"/>
+		<passive_effect name="RoundRayCount" operation="base_set" value="1" tags="perkBoomstick"/>
+		<passive_effect name="MaxRange" operation="base_set" value="45" tags="perkBoomstick"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="35" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.2" tags="perkBoomstick"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.2" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.38" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.06" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15" tags="perkBoomstick"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value=".3" tags="perkBoomstick"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-5" tags="earth"/>
+		<passive_effect name="DegradationPerUse" operation="perc_add" value="6"/>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.8" tags="perkBoomstick"/><display_value name="dTargetArmor" value="-.9"/>
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="4" tags="perkBoomstick"/><display_value name="dTargetPenetration" value="4"/>
+	</effect_group>
+	
+	<effect_group name="perkPenetrator" tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionRayHit" action="RangedExplosion, CustomParticleLoader" particle_index="#@modfolder:Resources/12GSuperpenetatorEF.unity3d?12GSuperpenetatorEF.Prefab" explode_delay="0"/>	
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.1" tags="perkBoomstick">
+			<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.15" tags="perkBoomstick">
+			<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.2" tags="perkBoomstick">
+			<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.3" tags="perkBoomstick">
+			<requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="4"/></passive_effect>
+	</effect_group>
+</item>
+</append>
+
+<append xpath="items/item[@name='ammoShotgunShell']">
+		<property name="Meshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammohold_12gbuck.Prefab"/>
+		<property name="DropMeshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammobox_12Gbuck.Prefab"/>
+</append>
+
+<append xpath="items/item[@name='ammoShotgunSlug']">
+		<property name="Meshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammohold_12gslug.Prefab"/>
+		<property name="DropMeshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammobox_12GSLUG.Prefab"/>
+</append>
+
+<append xpath="items/item[@name='ammoShotgunBreachingSlug']">
+		<property name="Meshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammohold_12gbreching.Prefab"/>
+		<property name="DropMeshfile" value="#@modfolder:Resources/IZYammobox_SHOTGUNPACK.unity3d?IZYammobox_12GBreching.Prefab"/>
+</append>
+</configs>

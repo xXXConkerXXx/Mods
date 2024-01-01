@@ -1,0 +1,20 @@
+Browning HP = https://sketchfab.com/3d-models/browning-hp-20d4656b51d6428a871f459e3a5dc31d
+CZ75 = https://sketchfab.com/3d-models/cz-75-classic-and-modern-editions-60e9d1a73be84cdbb20a4f606aea3a67
+LUGER P08 = https://sketchfab.com/3d-models/luger-p08-free-download-3162bdd6f91d4334bebb40bae461933a
+C96 R9 = https://sketchfab.com/3d-models/mauser-gun-c96-be1e0793a5be47b199e3c97172e371df
+
+VolkSMG = https://sketchfab.com/3d-models/sten-mk2-submachine-gun-6544ed03279748d3abe800c3f582460f
+Model38 = https://sketchfab.com/3d-models/beretta-mab-38-4607b3ab335f4c28a065276a5e7e1d77
+MP40 = https://sketchfab.com/3d-models/mp-40-maschinenpistole-40-4878454129b44dfd8b87baa4fe7587bd
+PPSH2000 = https://sketchfab.com/3d-models/ppsh-41-tactical-d7d785b781a94df5b9a4956f64bc3e93
+
+ARM-9 a2 = https://sketchfab.com/3d-models/lr-300-ml-a-assault-rifle-ac375d2498bd4a59a23a878312b6ac43
+MP5 = https://sketchfab.com/3d-models/hk-mp5-9bdb2934a94b45ed92c6307883c546b7
+SAIKA9 = 
+https://sketchfab.com/3d-models/saiga-9mm-3d031dfeb2ad45beb19e89977225a631
+https://sketchfab.com/3d-models/ak-74-customized-dc78efe4eab747b4be664c02e9f53f56
+CZ Scorpion EVO3 = https://sketchfab.com/3d-models/cz-scorpion-evo-3-s1-fc8f5444abd54c37ae672c12b08a0560
+
+
+and many others for additional parts
+

@@ -1,0 +1,151 @@
+<configs>
+<!-- oooooooooooo  -->
+<!-- Group_new_MG  -->
+<!-- oooooooooooo  -->
+	<insertAfter xpath="//lootgroup[@name='groupWeaponsT3_Machinegunner']">
+	
+	<lootgroup name="groupWeaponsT1_Machinegunner_CAR15" count="all" loot_quality_template="QLTemplateT1">
+		<item name="IZYgunT1assaultrifleTacticalCarbineCAR15"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT1_Machinegunner_FNNLCAL" count="all" loot_quality_template="QLTemplateT1">
+		<item name="IZYgunT1assaultrifleBattleCarbineFNLcal"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT1_Machinegunner_NEGEV" count="all" loot_quality_template="QLTemplateT1">
+		<item name="IZYgunT1LMGIWINegev"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT2_Machinegunner_M4C" count="all" loot_quality_template="QLTemplateT2">
+		<item name="IZYgunT2assaultrifleTacticalCarbineM4C"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT2_Machinegunner_HK33" count="all" loot_quality_template="QLTemplateT2">
+		<item name="IZYgunT2assaultrifleBattleCarbineHK33"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT2_Machinegunner_M249" count="all" loot_quality_template="QLTemplateT2">
+		<item name="IZYgunT2LMGM249"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_Machinegunner_SOCMK1" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT3assaultrifleTacticalCarbineSOCmk1"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_Machinegunner_AKWA2" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT3assaultrifleBattleCarbineAKWa2"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_Machinegunner_AMELI" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT3LMGAmeliMG"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT4_Machinegunner_SCARL" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4assaultrifleBattleCarbineScarLight"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT4_Machinegunner_G36C" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4assaultrifleTacticalCarbineG36cA1"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT4_Machinegunner_HEAVY16" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4LMGHeavy16"/>
+	</lootgroup>
+	
+	</insertAfter>
+<!-- Adding new weapon groups to loot groups  -->
+
+	<append xpath="//lootgroup[@name='groupWeaponsT1_Ranged']">	
+		<item group="groupWeaponsT1_Machinegunner_CAR15"/>
+		<item group="groupWeaponsT1_Machinegunner_FNNLCAL"/>
+		<item group="groupWeaponsT1_Machinegunner_NEGEV"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupWeaponsT2_Ranged']">	
+		<item group="groupWeaponsT2_Machinegunner_M4C"/>
+		<item group="groupWeaponsT2_Machinegunner_HK33"/>
+		<item group="groupWeaponsT2_Machinegunner_M249"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupWeaponsT3_Ranged']">	
+		<item group="groupWeaponsT3_Machinegunner_SOCMK1"/>
+		<item group="groupWeaponsT3_Machinegunner_AKWA2"/>
+		<item group="groupWeaponsT3_Machinegunner_AMELI"/>
+		<!-- ooooo TIER4 ooooo  -->
+		<item group="groupWeaponsT4_Machinegunner_SCARL" prob="0.2"/>
+		<item group="groupWeaponsT4_Machinegunner_G36C" prob="0.2"/>
+		<item group="groupWeaponsT4_Machinegunner_HEAVY16" prob="0.2"/>
+	</append>
+
+<!-- OOO QUEST_Reward OOO  -->
+
+	<append xpath="//lootgroup[@name='groupQuestAmmo']">	
+		<item name="IZYammo556mmBulletBall" count="80" loot_prob_template="QuestT1Prob"/>
+		<item name="IZYammo556mmArmorpiercing" count="35" loot_prob_template="QuestT2Prob"/>
+		<item name="IZYammo556mmHighPower" count="35" loot_prob_template="QuestT2Prob"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']">	
+		<item name="IZYgunT1assaultrifleTacticalCarbineCAR15"/>
+		<item name="IZYgunT1assaultrifleBattleCarbineFNLcal"/>
+		<item name="IZYgunT1LMGIWINegev"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT2']">	
+		<item name="IZYgunT2assaultrifleBattleCarbineHK33"/>
+		<item name="IZYgunT2assaultrifleTacticalCarbineM4C"/>
+		<item name="IZYgunT2LMGM249"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']">	
+		<item name="IZYgunT3assaultrifleBattleCarbineAKWa2"/>
+		<item name="IZYgunT3assaultrifleTacticalCarbineSOCmk1"/>
+		<item name="IZYgunT3LMGAmeliMG"/>
+		<item name="IZYgunT4assaultrifleBattleCarbineScarLight" prob="0.2"/>
+		<item name="IZYgunT4assaultrifleTacticalCarbineG36cA1" prob="0.2"/>
+		<item name="IZYgunT4LMGHeavy16" prob="0.2"/>
+	</append>
+	
+<!-- OOO CREAT_AMMO_GROUP OOO  -->
+
+	<insertAfter xpath="//lootgroup[@name='group762mmLarge']">
+	
+		<lootgroup name="group556ammoSmall">
+			<item name="IZYammo556mmBulletBall" count="6,8" loot_stage_count_mod="0.01"/>
+		</lootgroup>
+		
+		<lootgroup name="group556ammoMedium">
+			<item name="IZYammo556mmBulletBall" count="15,20" loot_stage_count_mod="0.01"/>
+		</lootgroup>
+		
+		<lootgroup name="group556ammoLarge">
+			<item name="IZYammo556mmBulletBall" count="30,50" loot_stage_count_mod="0.01"/>
+		</lootgroup>
+
+	</insertAfter>
+
+<!-- OOO AMMO_LOOT_to_groupsize OOO  -->
+
+	<append xpath="//lootgroup[@name='groupAmmoSmall']">	
+		<item group="group556ammoSmall"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupAmmoSmallNoArrow']">	
+		<item group="group556ammoSmall"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupAmmoMedium']">	
+		<item group="group556ammoMedium"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupAmmoMediumNoArrow']">	
+		<item group="group556ammoMedium"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupAmmoLarge']">	
+		<item group="group556ammoLarge"/>
+	</append>
+	
+<!-- OOO SHOTGUNSHELL_LOOT_USED_VANILLA  -->
+
+</configs>

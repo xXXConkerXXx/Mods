@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<addnew>
+
+		<!--	Longbarrel		-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunBarrelExtender']">
+	
+		<item_property_overrides name="IZYgunT3PistolP08luger">
+			<property name="Meshfile" value="#@modfolder:Resources/P08Luger.unity3d?P08Luger_barrel.Prefab"/>
+		</item_property_overrides>
+			
+	</append>
+
+		<!--	MAGAZINE-DRUM 	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunDrumMagazineExtender']">
+	
+		<item_property_overrides name="IZYgunT3TacticalSMGSaika9">
+			<property name="Meshfile" value="#@modfolder:Resources/Saika9.unity3d?Saika9_drummag.Prefab"/>
+		</item_property_overrides>
+			
+	</append>
+
+		<!--	MAGAZINE-EXT 	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtender']">
+	
+		<item_property_overrides name="IZYgunT3TacticalSMGSaika9">
+			<property name="Meshfile" value="#@modfolder:Resources/Saika9.unity3d?Saika9_magazine.Prefab"/>
+		</item_property_overrides>
+		
+	</append>
+
+			<!--	FORGRIP 	-->
+	<append xpath="/item_modifiers/item_modifier[@name='modGunForegrip']">
+	
+		<item_property_overrides name="IZYgunT4SMGTokarevPP209">
+			<property name="Meshfile" value="#@modfolder:Resources/tokarevSMG.unity3d?tokarevSMG_grip.Prefab"/>
+		</item_property_overrides>
+		
+	</append>
+
+		<!--	RET-STOCK 	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunRetractingStock']">
+	
+			<item_property_overrides name="IZYgunT2SMGBerettaM38">
+				<property name="Meshfile" value="#@modfolder:Resources/BerettaM38.unity3d?BerettaM38_stock.Prefab"/>
+			</item_property_overrides>
+	
+			<item_property_overrides name="IZYgunT3SMGSMP40">
+				<property name="Meshfile" value="#@modfolder:Resources/SMP40.unity3d?SMP40_stock.Prefab"/>
+			</item_property_overrides>
+			
+	</append>
+
+		<!--	FLASHLIGHT 	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']">
+	
+			<item_property_overrides name="IZYgunT2TacticalSMGSMP5">
+				<property name="Meshfile" value="#@modfolder:Resources/SMP5.unity3d?SMP5_flashlight.Prefab"/>
+			</item_property_overrides>
+			
+	</append>
+
+		<!--	LASER   	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']">
+	
+			<item_property_overrides name="IZYgunT2TacticalSMGSMP5">
+				<property name="Meshfile" value="#@modfolder:Resources/SMP5.unity3d?SMP5_laser.Prefab"/>
+			</item_property_overrides>
+			
+	</append>
+
+		<!--	REFLEXSIGHT 	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']">
+
+		<!--	TRA-PISTOL 	-->
+			<item_property_overrides name="IZYgunT1PistolBrowningHipower">
+				<property name="ScopeCameraOffset" value="-.0004,.0055,.1"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+		
+			<item_property_overrides name="IZYgunT2PistolCZ75">
+				<property name="ScopeCameraOffset" value="-.00045,-.0072,.1"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT3PistolP08luger">
+				<property name="ScopeCameraOffset" value="-.0002,.012,.02"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT4PistolC96red9">
+				<property name="ScopeCameraOffset" value="-.0005,.01175,.025"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+		<!--	TRA-SMG 	-->
+			<item_property_overrides name="IZYgunT1SMGVolksmachinegun">
+				<property name="ScopeCameraOffset" value=".0039,.0113,.4"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+		
+			<item_property_overrides name="IZYgunT2SMGBerettaM38">
+				<property name="ScopeCameraOffset" value=".003,-.0027,.3"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+		
+			<item_property_overrides name="IZYgunT3SMGSMP40">
+				<property name="ScopeCameraOffset" value="-.00062,.0048,.08"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT4SMGTokarevPP209">
+				<property name="ScopeCameraOffset" value="0,-.00516,.3"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+		<!--	TAC-SMG 	-->
+			<item_property_overrides name="IZYgunT1TacticalSMGARM9a2">
+				<property name="Meshfile" value="#@modfolder:Resources/ARM9A2.unity3d?ARM9A2_reflex.Prefab"/>
+				<property name="ScopeCameraOffset" value=".0013,.001,-.05"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT2TacticalSMGSMP5">
+				<property name="ScopeCameraOffset" value="-.00035,-.023,-.01"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT3TacticalSMGSaika9">
+				<property name="ScopeCameraOffset" value=".0045,-.0054,.25"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT4TacticalSMGCZscorpion">
+				<property name="Meshfile" value="#@modfolder:Resources/CZscorpion.unity3d?CZscorpion_reflex.Prefab"/>
+				<property name="ScopeCameraOffset" value="0,-.0225,0"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+		
+	</append>
+	
+		<!--	2XSCOPE	-->
+		
+	<append xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']">
+			<!--	TRA-PISTOL	-->
+			<item_property_overrides name="IZYgunT1PistolBrowningHipower">
+				<property name="ScopeCameraOffset" value="-.0007,.0025,.1"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT2PistolCZ75">
+				<property name="ScopeCameraOffset" value="-.0006,-.0065,.05"/>
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT3PistolP08luger">
+				<property name="ScopeCameraOffset" value="-.0002,.0145,.01"/>
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT4PistolC96red9">
+				<property name="ScopeCameraOffset" value="-.0005,.015,.03"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<!--	TRA-smg	-->
+			<item_property_overrides name="IZYgunT1SMGVolksmachinegun">
+				<property name="ScopeCameraOffset" value=".0039,.01,.4"/>
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT2SMGBerettaM38">
+				<property name="ScopeCameraOffset" value=".003,.0038,.3"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT3SMGSMP40">
+				<property name="ScopeCameraOffset" value="-.00062,.0105,.08"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT4SMGTokarevPP209">
+				<property name="ScopeCameraOffset" value="0,.0065,.3"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+				<!--	TAC-PISTOL	-->
+			<item_property_overrides name="IZYgunT1TacticalSMGARM9a2">
+				<property name="Meshfile" value="#@modfolder:Resources/ARM9A2.unity3d?ARM9A2_scope.Prefab"/>
+				<property name="ScopeCameraOffset" value=".0012,-.0169,-.05"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT2TacticalSMGSMP5">
+				<property name="ScopeCameraOffset" value="-.00025,-.0308,-.01"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT3TacticalSMGSaika9">
+				<property name="ScopeCameraOffset" value=".0045,-.0105,.3"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT4TacticalSMGCZscorpion">
+				<property name="Meshfile" value="#@modfolder:Resources/CZscorpion.unity3d?CZscorpion_scope.Prefab"/>
+				<property name="ScopeCameraOffset" value="0,-.0205,0"/>
+				<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+				<property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD4.tga"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+			</item_property_overrides>
+		
+	</append>
+	
+		<!--	Silencer 	-->
+	<append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
+	
+			<item_property_overrides name="IZYgunT1PistolBrowningHipower">
+				<property name="Sound_start" value="CZ75_silen_fire"/>
+			</item_property_overrides>
+	
+			<item_property_overrides name="IZYgunT2PistolCZ75">
+				<property name="Sound_start" value="CZ75_silen_fire"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT3PistolP08luger">
+				<property name="Sound_start" value="CZ75_silen_fire"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT4PistolC96red9">
+				<property name="Sound_start" value="SMP40_silen_fire"/>
+				<property name="Sound_loop" value="SMP40_silen_fire"/>
+				<property name="Sound_end" value="SMP40_silen_end"/>
+			</item_property_overrides>
+	
+			<item_property_overrides name="IZYgunT1SMGVolksmachinegun">
+				<property name="Sound_start" value="SMP40_silen_fire"/>
+				<property name="Sound_loop" value="SMP40_silen_fire"/>
+				<property name="Sound_end" value="SMP40_silen_end"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT2SMGBerettaM38">
+				<property name="Sound_start" value="SMP40_silen_fire"/>
+				<property name="Sound_loop" value="SMP40_silen_fire"/>
+				<property name="Sound_end" value="SMP40_silen_end"/>
+			</item_property_overrides>
+	
+			<item_property_overrides name="IZYgunT3SMGSMP40">
+				<property name="Sound_start" value="SMP40_silen_fire"/>
+				<property name="Sound_loop" value="SMP40_silen_fire"/>
+				<property name="Sound_end" value="SMP40_silen_end"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT4SMGTokarevPP209">
+				<property name="Sound_start" value="SMP5_silen_fire"/>
+				<property name="Sound_loop" value="SMP5_silen_fire"/>
+				<property name="Sound_end" value="SMP5_silen_end"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT1TacticalSMGARM9a2">
+				<property name="Sound_start" value="SMP5_silen_fire"/>
+				<property name="Sound_loop" value="SMP5_silen_fire"/>
+				<property name="Sound_end" value="SMP5_silen_end"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT2TacticalSMGSMP5">
+				<property name="Sound_start" value="SMP5_silen_fire"/>
+				<property name="Sound_loop" value="SMP5_silen_fire"/>
+				<property name="Sound_end" value="SMP5_silen_end"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT3TacticalSMGSaika9">
+				<property name="Sound_start" value="SMP5_silen_fire"/>
+				<property name="Sound_loop" value="SMP5_silen_fire"/>
+				<property name="Sound_end" value="SMP5_silen_end"/>
+			</item_property_overrides>
+			
+			<item_property_overrides name="IZYgunT4TacticalSMGCZscorpion">
+				<property name="Sound_start" value="SMP5_silen_fire"/>
+				<property name="Sound_loop" value="SMP5_silen_fire"/>
+				<property name="Sound_end" value="SMP5_silen_end"/>
+			</item_property_overrides>
+	
+	</append>
+	
+</addnew>

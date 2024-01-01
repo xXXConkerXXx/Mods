@@ -1,0 +1,17 @@
+<configs>
+
+		<!--	GUN_TRADER	-->
+		
+	<append xpath="//trader_item_group[@name='groupRangedAll']">
+		<item name="IZYgunT1SniperRifleMosinNagant" quality="2,5"/>
+		<item name="IZYgunT2SniperRifleM40a3" quality="2,5"/>
+		<item name="IZYgunT3SniperRifleL96S" quality="2,5"/>
+		<item name="IZYgunT4SniperRifleHKPSG1" quality="2,5" prob="0.2"/>
+		<item name="IZYgunT1DMRSks" quality="2,5"/>
+		<item name="IZYgunT2DMRM141" quality="2,5"/>
+		<item name="IZYgunT3DMRSR110a2" quality="2,5"/>
+		<item name="IZYgunT4DMRM21SOCOM" quality="2,5" prob="0.2"/>
+
+	</append>
+
+</configs>	

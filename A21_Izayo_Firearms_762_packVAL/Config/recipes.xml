@@ -1,0 +1,78 @@
+<addnew>
+
+	<append xpath="/recipes">
+
+	<recipe name="IZYPoster762PACKmap" count="1">
+		<ingredient name="resourcePaper" count="10"/>
+	</recipe>
+
+	<recipe name="IZYgunT1SniperRifleMosinNagant" count="1" craft_area="workbench" tags="learnable,perkDeadEye">
+		<ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+		<ingredient name="resourceDuctTape" count="2"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceSpring" count="2"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunRifleT1HuntingRifleParts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT2SniperRifleM40a3" count="1" craft_area="workbench" tags="learnable,perkDeadEye">
+		<ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="15"/>
+		<ingredient name="resourceDuctTape" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceSpring" count="10"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunRifleT1HuntingRifleParts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT3SniperRifleL96S" count="1" craft_area="workbench" tags="learnable,perkDeadEye">
+		<ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="30"/>
+		<ingredient name="resourceDuctTape" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="40"/>
+		<ingredient name="resourceSpring" count="12"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunRifleT1HuntingRifleParts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT1DMRSks" count="1" craft_area="workbench" tags="learnable,perkDeadEye">
+		<ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+		<ingredient name="resourceDuctTape" count="2"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceSpring" count="2"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunRifleT1HuntingRifleParts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT2DMRM141" count="1" craft_area="workbench" tags="learnable,perkDeadEye">
+		<ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="15"/>
+		<ingredient name="resourceDuctTape" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="20"/>
+		<ingredient name="resourceSpring" count="10"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunRifleT1HuntingRifleParts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+
+	<recipe name="IZYgunT3DMRSR110a2" count="1" craft_area="workbench" tags="learnable,perkDeadEye">
+		<ingredient name="gunRifleT1HuntingRifleParts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="30"/>
+		<ingredient name="resourceDuctTape" count="10"/>
+		<ingredient name="resourceScrapPolymers" count="40"/>
+		<ingredient name="resourceSpring" count="12"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunRifleT1HuntingRifleParts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+
+	</append>
+
+
+</addnew>

@@ -1,0 +1,16 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+
+IZYgunT1PistolBrowningHipower,items,gun,,Browning Hi-Power (T1),Browning Hi-Power (T1),,,,,,,,,,,,,,
+IZYgunT2PistolCZ75,items,gun,,CZ 75 (T2),CZ 75 (T2),,,,,,,,,,,,,,
+IZYgunT3PistolP08luger,items,gun,,P08 Luger (T3),P08 Luger (T3),,,,,,,,,,,,,,
+IZYgunT4PistolC96red9,items,gun,,Red-Nine C96 (T4),Red-Nine C96 (T4),,,,,,,,,,,,,,
+IZYgunT1SMGVolksmachinegun,items,gun,,VOLKs Sub-machinegun (T1),VOLKs Sub-machinegun (T1),,,,,,,,,,,,,,
+IZYgunT2SMGBerettaM38,items,gun,,Model 38 (T2),Model 38 (T2),,,,,,,,,,,,,,
+IZYgunT3SMGSMP40,items,gun,,MP-40 (T3),MP-40 (T3),,,,,,,,,,,,,,
+IZYgunT4SMGTokarevPP209,items,gun,,PPSH-2000 (T4),PPSH-2000 (T4),,,,,,,,,,,,,,
+IZYgunT1TacticalSMGARM9a2,items,gun,,ARM-9 A2 (T1),ARM-9 A2 (T1),,,,,,,,,,,,,,
+IZYgunT2TacticalSMGSMP5,items,gun,,MP5 (T2),MP5 (T2),,,,,,,,,,,,,,
+IZYgunT3TacticalSMGSaika9,items,gun,,Saika-9 (T3),Saika-9 (T3),,,,,,,,,,,,,,
+IZYgunT4TacticalSMGCZscorpion,items,gun,,Scorpion EVO3 (T4),Scorpion EVO3 (T4),,,,,,,,,,,,,,
+
+

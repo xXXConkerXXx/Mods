@@ -1,0 +1,159 @@
+<configs>
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupVehicles']">
+		<item name="vehicleGolfCartchassis"/>
+		<item name="vehicleGolfCartaccessories"/>
+		<item name="vehicleGolfCartplaceable"/>
+		<item name="vehicleDirtBikeChassis"/>
+		<item name="vehicleDirtBikeParts"/>
+		<item name="vehicleDirtBikeplaceable"/>
+		<item name="vehicleCruiserChassis"/>
+		<item name="vehicleCruiserbars"/>
+		<item name="vehicleCruiserplaceable"/>
+		<item name="vehicleCruiser2placeable"/>
+		<item name="vehicleRatChassis"/>
+		<item name="vehicleRatbars"/>
+		<item name="vehicleRatplaceable"/>
+		<item name="vehicleRat2placeable"/>
+		<item name="vehicleJunkerChassis"/>
+		<item name="vehicleJunkerbars"/>
+		<item name="vehicleJunkerplaceable"/>
+		<item name="vehicleJunker2placeable"/>
+		<item name="vehicleBuggychassis"/>
+		<item name="vehicleBuggyaccessories"/>
+		<item name="vehicleBuggyplaceable"/>
+		<item name="vehicleUAZ452chassis"/>
+		<item name="vehicleUAZ452placeable"/>
+		<item name="vehicleNovachassis"/>
+		<item name="vehicleNovaaccessories"/>
+		<item name="vehicleNovaplaceable"/>
+		<item name="vehicleNovaredplaceable"/>
+		<item name="vehicleNovablackplaceable"/>
+		<item name="vehicleMRAPparts"/>
+		<item name="vehicleMRAPaccessories"/>
+		<item name="vehicleMRAPplaceable"/>
+		<item name="vehicleMRAP2placeable"/>
+		<item name="vehicleMD500chassis"/>
+		<item name="vehicleMD500accessories"/>
+		<item name="vehicleMD500placeable"/>
+		<item name="vehicleMarauderchassis"/>
+		<item name="vehicleMarauderaccessories"/>
+		<item name="vehicleMarauderplaceable"/>
+		<item name="vehicleMarauderblackplaceable"/>
+		<item name="vehicleGNXchassis"/>
+		<item name="vehicleGNXaccessories"/>
+		<item name="vehicleGNXBlackplaceable"/>
+		<item name="vehicleGNXRedplaceable"/>
+		<item name="vehicleBRDM2chassis"/>
+		<item name="vehicleBRDM2accessories"/>
+		<item name="vehicleBRDM2placeable"/>
+		<item name="vehicleBRDM2desertplaceable"/>
+		<item name="vehiclePickupchassis"/>
+		<item name="vehiclePickupaccessories"/>
+		<item name="vehiclePickupplaceable"/>
+		<item name="vehicleOldSemichassis"/>
+		<item name="vehicleOldSemibody"/>
+		<item name="vehicleOldSemiplaceable"/>
+		<item name="vehicleDusterchassis"/>
+		<item name="vehicleDusteraccessories"/>
+		<item name="vehicleDusterplaceable"/>
+		<item name="vehicleStallionchassis"/>
+		<item name="vehicleStallionaccessories"/>
+		<item name="vehicleStalliongreenplaceable"/>
+		<item name="vehicleStallionredplaceable"/>
+		<item name="vehicleStallionblueplaceable"/>
+		<item name="vehicleStallionwhiteplaceable"/>
+		<item name="vehicleChargerchassis"/>
+		<item name="vehicleChargeraccessories"/>
+		<item name="vehicleChargerblackplaceable"/>
+		<item name="vehicleChargerblack2placeable"/>
+		<item name="vehicleChargerorangeplaceable"/>
+		<item name="vehicleChargerorange2placeable"/>
+		<item name="vehicleChargeryellowplaceable"/>
+		<item name="vehicleChargeryellow2placeable"/>
+		<item name="vehicleChargergreenplaceable"/>
+		<item name="vehicleChargergreen2placeable"/>
+		<item name="vehicleChargertealplaceable"/>
+		<item name="vehicleChargerteal2placeable"/>
+		<item name="vehicleChargerrustplaceable"/>
+		<item name="vehicleChargerrust2placeable"/>
+		<item name="vehicleSHERPchassis"/>
+		<item name="vehicleSHERPaccessories"/>
+		<item name="vehicleSHERPplaceable"/>
+		<item name="vehicleUH60chassis"/>
+		<item name="vehicleUH60accessories"/>
+		<item name="vehicleUH60placeable"/>
+		<item name="vehicleHotRodchassis"/>
+		<item name="vehicleHotRodaccessories"/>
+		<item name="vehicleHotRod1placeable"/>
+		<item name="vehicleHotRod2placeable"/>
+		<item name="vehicleHotRod3placeable"/>
+		<item name="vehicleHotRod4placeable"/>
+		<item name="vehicleHotRod5placeable"/>
+		<item name="vehicleHotRod6placeable"/>
+		<item name="vehicleLMTVchassis"/>
+		<item name="vehicleLMTVbody"/>
+		<item name="vehicleLMTVplaceable"/>
+		<item name="vehicleBoxTruckchassis"/>
+		<item name="vehicleBoxTruckbody"/>		
+		<item name="vehicleBoxTruckPlainplaceable"/>
+		<item name="vehicleBoxTruckHostessplaceable"/>
+		<item name="vehicleHumveechassis"/>
+		<item name="vehicleHumveebody"/>
+		<item name="vehicleHumveeplaceable"/>
+		<item name="vehicleHumveeToplessplaceable"/>
+		<item name="vehicleWillyJeepplaceable"/>
+		<item name="vehicleWillyJeepToplessplaceable"/>
+		<item name="vehicleWillyJeepBlackplaceable"/>
+		<item name="vehicleWillyJeepToplessBlackplaceable"/>
+		<item name="vehicleWillyJeepBlueplaceable"/>
+		<item name="vehicleWillyJeepToplessBlueplaceable"/>
+		<item name="vehicleWillyJeepGreenplaceable"/>
+		<item name="vehicleWillyJeepToplessGreenplaceable"/>
+		<item name="vehicleWillyJeepOrangeplaceable"/>
+		<item name="vehicleWillyJeepToplessOrangeplaceable"/>
+		<item name="vehicleWillyJeepPurpleplaceable"/>
+		<item name="vehicleWillyJeepToplessPurpleplaceable"/>
+		<item name="vehicleWillyJeepRedplaceable"/>
+		<item name="vehicleWillyJeepToplessRedplaceable"/>
+		<item name="vehicleWorkTruckchassis"/>
+		<item name="vehicleWorkTruckaccessories"/>
+		<item name="vehicleWorkTruckplaceable"/>
+	</append>
+	<append xpath="/traders">
+		<trader_info id="75" reset_interval="3" open_time="6:05" close_time="21:50">
+		<!-- *** Specialty -->
+			<trader_items count="all">
+				<item group="groupVehicles" unique_only="true" count="2"/>
+				<item group="groupMeleeMods" unique_only="true" count="1,2"/>
+				<item group="tools" unique_only="true" count="4"/>
+				<item group="rareTools" unique_only="true" count="1,3"/>
+				<item group="traderElectrical"  unique_only="true" count="8,15"/>
+				<item group="skillMagazinesTraderBob" unique_only="true" count="2,3"/>
+				<item group="books" unique_only="true" count="2,3"/>
+				<item name="resourceWaterFilter" count="3,5"/>
+				<item name="toolCookingPot" count="1,3"/>
+				<item name="toolCookingGrill" count="1,3"/>
+			</trader_items>		
+			<!-- *** General -->
+			<trader_items count="all">
+				<item group="traderAlways"/>
+				<item group="traderGeneral" count="4,10"/>
+				<item group="groupModsAll" unique_only="true" count="2,5"/>
+				<item group="tools" unique_only="true" count="1,4"/>
+				<item group="generalResources" count="5,8"/>
+				<item group="traderElectrical"  unique_only="true" count="2,5"/>
+				<item group="groupMeleeAll" count="3,5"/>
+				<item group="groupRangedAll" count="3,5"/>
+				<item group="weaponsGunParts" count="2,4"/>
+				<item name="armorMilitarySetParts" count="1,2"/>
+				<item name="armorSteelSetParts" count="1,2"/>
+				<item name="resourceMilitaryFiber" count="1,2"/>
+				<item group="clothes" count="1,4"/>
+				<item group="groupArmorAllLight" count="1,2"/>
+				<item group="groupArmorAllHeavy" count="1,2"/>
+				<item group="constructionSupplies" count="2,4"/>
+				<item group="decorativeBlocks" unique_only="true" count="6,10"/>
+			</trader_items>
+		</trader_info>
+	</append>
+</configs>

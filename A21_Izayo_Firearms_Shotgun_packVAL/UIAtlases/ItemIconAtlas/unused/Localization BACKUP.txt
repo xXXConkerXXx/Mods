@@ -1,0 +1,17 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+
+ammoShotgunShellFlechette,items,ammo,,,Shotgun Flechette Darts(Ammo),,,,,,,,,,,,,,
+ammoShotgunShellTokenShot,items,ammo,,,Shotgun Token Coins(Ammo),,,,,,,,,,,,,,
+ammoShotgunSuperpenetratorslug,items,ammo,,,Shotgun Super Penetrator Slug(Ammo),,,,,,,,,,,,,,
+IZYgunT1shotgunDoublebarrellong,items,gun,,,Double-Barrel Shotgun/Long (T1),,,,,,,,,,,,,,
+IZYgunT1shotgunBoltactionShotgun,items,gun,,,Higgins Bolt-Action Shotgun(T1),,,,,,,,,,,,,,
+IZYgunT1shotgunModel1887,items,gun,,,Model 1887 Shotgun (T1),,,,,,,,,,,,,,
+IZYgunT2shotgunM31hunter,items,gun,,,M31 Hunter (T2),,,,,,,,,,,,,,
+IZYgunT2shotgunM1897,items,gun,,,M1897 Trench Gun (T2),,,,,,,,,,,,,,
+IZYgunT2shotgunM870Police,items,gun,,,M870 Police Shotgun (T2),,,,,,,,,,,,,,
+IZYgunT3shotgunM4terminator,items,gun,,,M4 Terminator (T3),,,,,,,,,,,,,,
+IZYgunT3shotgunXM12G,items,gun,,,XM-12 Automatic Shotgun (T3),,,,,,,,,,,,,,
+IZYgunT3shotgunM590S,items,gun,,,M590 Special (T3),,,,,,,,,,,,,,
+IZYgunT4shotgunSaika12g,items,gun,,,Saika 12 Automatic Shotgun (T4),,,,,,,,,,,,,,
+IZYgunT4shotgunHEXAGun,items,gun,,,HEXAGUN (T4),,,,,,,,,,,,,,
+IZYgunT4shotgunSPAS12,items,gun,,,SPAS-12/Semi-Automatic (T4),,,,,,,,,,,,,,

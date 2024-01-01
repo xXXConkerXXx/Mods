@@ -1,0 +1,60 @@
+<configs>
+<!-- oooooooooooo  -->
+<!-- Group_new_MG  -->
+<!-- oooooooooooo  -->
+	<insertAfter xpath="//lootgroup[@name='groupWeaponsT3_DeadEye']">
+	
+	<lootgroup name="groupWeaponsT1_DeadEye_MosinN" count="all" loot_quality_template="QLTemplateT1">
+		<item name="IZYgunT1SniperRifleMosinNagant"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT1_DeadEye_SKS" count="all" loot_quality_template="QLTemplateT1">
+		<item name="IZYgunT1DMRSks"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT2_DeadEye_M40A3" count="all" loot_quality_template="QLTemplateT2">
+		<item name="IZYgunT2SniperRifleM40a3"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT2_DeadEye_M141" count="all" loot_quality_template="QLTemplateT2">
+		<item name="IZYgunT2DMRM141"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_DeadEye_L96" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT3SniperRifleL96S"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT3_DeadEye_SR110" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT3DMRSR110a2"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT4_DeadEye_PSG1" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4SniperRifleHKPSG1"/>
+	</lootgroup>
+	
+	<lootgroup name="groupWeaponsT4_DeadEye_M21SOCOM" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4DMRM21SOCOM"/>
+	</lootgroup>
+	
+	</insertAfter>
+<!-- Adding new weapon groups to loot groups  -->
+
+	<append xpath="//lootgroup[@name='groupWeaponsT1_Ranged']">	
+		<item group="groupWeaponsT1_DeadEye_MosinN"/>
+		<item group="groupWeaponsT1_DeadEye_SKS"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupWeaponsT2_Ranged']">	
+		<item group="groupWeaponsT2_DeadEye_M40A3"/>
+		<item group="groupWeaponsT2_DeadEye_M141"/>
+	</append>
+	
+	<append xpath="//lootgroup[@name='groupWeaponsT3_Ranged']">	
+		<item group="groupWeaponsT3_DeadEye_L96"/>
+		<item group="groupWeaponsT3_DeadEye_SR110"/>
+		<!-- ooooo TIER4 ooooo  -->
+		<item group="groupWeaponsT4_DeadEye_PSG1" prob="0.2"/>
+		<item group="groupWeaponsT4_DeadEye_M21SOCOM" prob="0.2"/>
+	</append>
+
+</configs>

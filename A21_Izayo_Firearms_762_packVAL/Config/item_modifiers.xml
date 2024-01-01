@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<addnew>
+
+	<append xpath="/item_modifiers/item_modifier[@name='modGunRetractingStock']">
+
+		<item_property_overrides name="IZYgunT1assaultrifleAK47Milled">
+			<property name="Meshfile" value="#@modfolder:Resources/ak47milled.unity3d?ak47milled_stock.Prefab"/>
+		</item_property_overrides>
+		
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']">
+					<!--SNIPER_R-->
+		<item_property_overrides name="IZYgunT1SniperRifleMosinNagant">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Mosinnagant.unity3d?Mosinnagant_reflex.Prefab"/>
+			<property name="ScopeCameraOffset" value=".006,.016,0"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT2SniperRifleM40a3">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value="-.000013,.0062,.02"/>
+			<property name="Meshfile" value="#@modfolder:Resources/TPCboltaction.unity3d?TPCboltaction_reflex.Prefab"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT3SniperRifleL96S">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value=".00074,.004,.02"/>
+			<property name="Meshfile" value="#@modfolder:Resources/L96.unity3d?L96_reflex.Prefab"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT4SniperRifleHKPSG1">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value=".0004,-.0232,.01"/>	
+				<property name="Meshfile" value="#@modfolder:Resources/HKPSG1.unity3d?HKPSG1_reflex.Prefab"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+					<!--DMR-->
+		<item_property_overrides name="IZYgunT1DMRSks">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value=".003,-.0151,.015"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT2DMRM141">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value=".0003,.0011,.025"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT3DMRSR110a2">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/SR110a2.unity3d?SR110a2_reflex.Prefab"/>
+			<property name="ScopeCameraOffset" value="0,.0024,-.055"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT4DMRM21SOCOM">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/M21SOCOM.unity3d?M21SOCOM_reflex.Prefab"/>
+			<property name="ScopeCameraOffset" value=".0004,-.0068,.25"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+					<!--ASS_RIFLE-->
+							
+		<item_property_overrides name="IZYgunT1assaultrifleAK47Milled">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value="-.00002,-.0213,.24"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+
+	</append>
+	
+			<!--	2XXXXXX	-->
+			<!--	X2SCOPE	-->
+			<!--	X2XXXX 	-->
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']">
+		<item_property_overrides name="*">
+			<property name="CrosshairOnAim" value="true"/>
+			<property name="Zoom_overlay" value="@:Other/Items/Weapons/HUD/sniper_zoom_overlay.tga"/>
+			<property name="Zoom_max_out" value="40"/>
+			<property name="Zoom_max_in" value="40"/>
+		</item_property_overrides>
+		
+				<!--SNIPER_R-->
+		
+		<item_property_overrides name="IZYgunT1SniperRifleMosinNagant">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD3.tga"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Mosinnagant.unity3d?Mosinnagant_scope.Prefab"/>
+			<property name="ScopeCameraOffset" value=".00619,-.0015,-.04"/>
+				<property name="Zoom_max_out" value="30"/>
+				<property name="Zoom_max_in" value="30"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT2SniperRifleM40a3">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD3.tga"/>
+			<property name="ScopeCameraOffset" value="-.000013,.0055,.01"/>
+				<property name="Zoom_max_out" value="30"/>
+				<property name="Zoom_max_in" value="30"/>
+			<property name="Meshfile" value="#@modfolder:Resources/TPCboltaction.unity3d?TPCboltaction_scope.Prefab"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT3SniperRifleL96S">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD3.tga"/>
+			<property name="ScopeCameraOffset" value=".00074,-.0108,.025"/>
+			<property name="Meshfile" value="#@modfolder:Resources/L96.unity3d?L96_scope.Prefab"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT4SniperRifleHKPSG1">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value=".0004,-.021,.01"/>	
+				<property name="Zoom_max_out" value="30"/>
+				<property name="Zoom_max_in" value="30"/>
+			<property name="Meshfile" value="#@modfolder:Resources/HKPSG1.unity3d?HKPSG1_scope.Prefab"/>
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD3.tga"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		
+				<!--DMR-->
+		
+		<item_property_overrides name="IZYgunT1DMRSks">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value=".003,-.0032,0"/>
+				<property name="Zoom_max_out" value="35"/>
+				<property name="Zoom_max_in" value="35"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+				<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD3.tga"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT2DMRM141">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value=".0001,-.007,-.01"/>
+			<property name="Zoom_max_out" value="35"/>
+			<property name="Zoom_max_in" value="35"/>
+			<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD3.tga"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT3DMRSR110a2">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/SR110a2.unity3d?SR110a2_scope.Prefab"/>
+			<property name="Zoom_max_out" value="35"/>
+			<property name="Zoom_max_in" value="35"/>
+			<property name="ScopeCameraOffset" value="0,.005,-.055"/>
+			<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD3.tga"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="IZYgunT4DMRM21SOCOM">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/M21SOCOM.unity3d?M21SOCOM_scope.Prefab"/>
+			<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD3.tga"/>
+			<property name="ScopeCameraOffset" value=".0004,-.0172,.3"/>
+			<property name="Zoom_max_out" value="35"/>
+			<property name="Zoom_max_in" value="35"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+					<!--A_RIFLE-->
+					
+		<item_property_overrides name="IZYgunT1assaultrifleAK47Milled">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value="-.00002,-.0195,.22"/>
+			<property name="Zoom_overlay" value="#@modfolder:Resources/blankXD3.tga"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+	</append>
+				<!--	X 4 SCOPE	-->
+				<!--	X 4 SCOPE	-->
+				<!--	X 4 SCOPE	-->
+				
+	<append xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']">
+		
+				<!--SNIPER_R-->
+		<item_property_overrides name="IZYgunT1SniperRifleMosinNagant">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Mosinnagant.unity3d?Mosinnagant_4xscope.Prefab"/>
+			<property name="ScopeCameraOffset" value=".01,-.005,0"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT2SniperRifleM40a3">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value="-.000013,.004,.02"/>
+			<property name="Meshfile" value="#@modfolder:Resources/TPCboltaction.unity3d?TPCboltaction_4xscope.Prefab"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT3SniperRifleL96S">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value=".00074,-.0105,.02"/>
+			<property name="Meshfile" value="#@modfolder:Resources/L96.unity3d?L96_4xscope.Prefab"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT4SniperRifleHKPSG1">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value=".0004,-.035,-.03"/>	
+			<property name="Meshfile" value="#@modfolder:Resources/HKPSG1.unity3d?HKPSG1_4xscope.Prefab"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+				<!--DMR-->
+		<item_property_overrides name="IZYgunT1DMRSks">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/SKS.unity3d?SKS_4xscope.Prefab"/>
+			<property name="ScopeCameraOffset" value=".005,-.01,-.01"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT2DMRM141">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/M141A.unity3d?M141A_4xscope.Prefab"/>
+			<property name="ScopeCameraOffset" value=".0001,-.01,0"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT3DMRSR110a2">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/SR110a2.unity3d?SR110a2_4xscope.Prefab"/>
+			<property name="ScopeCameraOffset" value="0,.001,.005"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT4DMRM21SOCOM">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/M21SOCOM.unity3d?M21SOCOM_4xscope.Prefab"/>
+			<property name="ScopeCameraOffset" value=".0004,-.0172,.38"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+
+	</append>
+				
+				<!--	X 8 SCOPE	-->
+				<!--	X 8 SCOPE	-->
+				<!--	X 8 SCOPE	-->
+				
+	<append xpath="/item_modifiers/item_modifier[@name='modGunScopeLarge']">
+		
+				<!--SNIPER_R-->
+		<item_property_overrides name="IZYgunT1SniperRifleMosinNagant">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Mosinnagant.unity3d?Mosinnagant_8xscope.Prefab"/>
+			<property name="ScopeCameraOffset" value=".01,-.006,0"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT2SniperRifleM40a3">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value="-.000013,.006,.02"/>
+			<property name="Meshfile" value="#@modfolder:Resources/TPCboltaction.unity3d?TPCboltaction_8xscope.Prefab"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT3SniperRifleL96S">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value=".00074,-.0105,.02"/>
+			<property name="Meshfile" value="#@modfolder:Resources/L96.unity3d?L96_8xscope.Prefab"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT4SniperRifleHKPSG1">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="ScopeCameraOffset" value=".0004,-.035,-.03"/>	
+			<property name="Meshfile" value="#@modfolder:Resources/HKPSG1.unity3d?HKPSG1_4xscope.Prefab"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+				<!--DMR-->
+		<item_property_overrides name="IZYgunT1DMRSks">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/SKS.unity3d?SKS_8xscope.Prefab"/>
+			<property name="ScopeCameraOffset" value=".005,-.01,-.01"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT2DMRM141">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/M141A.unity3d?M141A_8xscope.Prefab"/>
+			<property name="ScopeCameraOffset" value=".0001,-.01,0"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT3DMRSR110a2">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/SR110a2.unity3d?SR110a2_8xscope.Prefab"/>
+			<property name="ScopeCameraOffset" value="0,.001,.005"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT4DMRM21SOCOM">
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Meshfile" value="#@modfolder:Resources/M21SOCOM.unity3d?M21SOCOM_8xscope.Prefab"/>
+			<property name="ScopeCameraOffset" value=".0004,-.0172,.38"/>
+                <property name="zoomTriggerEffectTriggerPullDualsense" value="PistolZoom"/>
+                <property name="zoomTriggerEffectTriggerPullXbox" value="PistolZoom"/>
+		</item_property_overrides>
+		
+	</append>
+				
+			<!--	Silencer 	-->
+			<!--	Silencer 	-->
+			<!--	Silencer 	-->
+			
+	<append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
+
+		<item_property_overrides name="IZYgunT1SniperRifleMosinNagant">
+			<property name="Sound_start" value="SKSb_silen_fire"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT2SniperRifleM40a3">
+			<property name="Sound_start" value="SKSb_silen_fire"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT3SniperRifleL96S">
+			<property name="Sound_start" value="SKSb_silen_fire"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT4SniperRifleHKPSG1">
+			<property name="Sound_start" value="SKSb_silen_fire"/>
+		</item_property_overrides>
+
+			<!--	DMR 	-->
+
+		<item_property_overrides name="IZYgunT1DMRSks">
+			<property name="Sound_start" value="SKSb_silen_fire"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT2DMRM141">
+			<property name="Sound_start" value="M141_silen_fire"/>
+			<property name="Sound_loop" value="M141_silen_fire"/>
+			<property name="Sound_end" value="M141_silen_end"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="IZYgunT3DMRSR110a2">
+			<property name="Sound_start" value="M141_silen_fire"/>
+			<property name="Sound_loop" value="M141_silen_fire"/>
+			<property name="Sound_end" value="M141_silen_end"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="IZYgunT4DMRM21SOCOM">
+			<property name="Sound_start" value="M141_silen_fire"/>
+			<property name="Sound_loop" value="M141_silen_fire"/>
+			<property name="Sound_end" value="M141_silen_end"/>
+		</item_property_overrides>
+		
+			<!--	ASS_RIFLE	-->
+	
+		<item_property_overrides name="IZYgunT1assaultrifleAK47Milled">
+			<property name="Sound_start" value="M141_silen_fire"/>
+			<property name="Sound_loop" value="M141_silen_fire"/>
+			<property name="Sound_end" value="M141_silen_end"/>
+		</item_property_overrides>
+		
+		
+	</append>
+	
+</addnew>

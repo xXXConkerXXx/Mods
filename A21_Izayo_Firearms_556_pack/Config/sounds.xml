@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configs>
+
+<append xpath="/Sounds">
+
+<SoundDataNode name="car15xm117_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/CAR15XM177.unity3d?car15xm117_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="car15xm117_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/CAR15XM177.unity3d?car15xm117_end"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="M4Cs_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/M4Cs.unity3d?M4Cs_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+
+<SoundDataNode name="M4Cs_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/M4Cs.unity3d?M4Cs_end"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+
+<SoundDataNode name="SOCmk1_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/SOCmk1.unity3d?SOCmk1_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+
+<SoundDataNode name="SOCmk1_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/SOCmk1.unity3d?SOCmk1_end"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+
+<SoundDataNode name="FNNcal_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/FNNcal.unity3d?FNNcal_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="FNNcal_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/FNNcal.unity3d?FNNcal_end"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="HK33_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/HK33.unity3d?HK33_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="HK33_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/HK33.unity3d?HK33_end"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="AKWa2_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/AKWa2.unity3d?AKWa2_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="AKWa2_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/AKWa2.unity3d?AKWa2_end"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="Scarlight_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/ScarLight.unity3d?Scarlight_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="Scarlight_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/ScarLight.unity3d?Scarlight_end"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+		<!--	***************************	-->
+		<!--	Silencer_sounds	-->
+		<!--	***************************	-->
+	
+<SoundDataNode name="556light_silen_fire_01"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="17" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/XXX_556_silencer_sound_pack_XXX.unity3d?556light_silen_fire_01"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="556light_silen_end_01"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="17" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/XXX_556_silencer_sound_pack_XXX.unity3d?556light_silen_end_01"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="556heavy_silen_fire_01"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="17" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/XXX_556_silencer_sound_pack_XXX.unity3d?556heavy_silen_fire_01"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="556heavy_silen_end_01"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="17" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/XXX_556_silencer_sound_pack_XXX.unity3d?556heavy_silen_end_01"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="MG249_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/MMG249.unity3d?MG249_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="MG249_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/MMG249.unity3d?MG249_end"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+
+<SoundDataNode name="AssaultrifleNEW1_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/assaultriflesoundfixIZY.unity3d?AssaultrifleNEW1_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="AssaultrifleNEW1_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/assaultriflesoundfixIZY.unity3d?AssaultrifleNEW1_end"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+
+<SoundDataNode name="NEGEV_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/NEGEV.unity3d?NEGEV_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="NEGEV_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/NEGEV.unity3d?NEGEV_end"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="ameliMG_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/AmeliMG.unity3d?ameliMG_fire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+<SoundDataNode name="ameliMG_end"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="70" time="2" muffled_when_crouched="1" heat_map_strength="0.7" heat_map_time="60"/>
+	<AudioClip ClipName="#@modfolder:Resources/AmeliMG.unity3d?ameliMG_end"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+</append>
+	
+</configs>

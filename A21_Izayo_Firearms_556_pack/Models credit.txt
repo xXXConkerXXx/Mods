@@ -1,0 +1,20 @@
+CAR-15 xm177 = https://sketchfab.com/3d-models/m16a2m4ar-15-automatic-rifle-75251517ef054c44bb22f07abefd099a
+M4Ca2 = https://sketchfab.com/3d-models/modern-warefare-m4a1-167dd49ffff14d41ab11b6417f128bf1
+SOCmk.1 = https://sketchfab.com/3d-models/silver-strike-estoc-8d158c8419f840e78a5d3fce0405a82e
+FNN L-CAL = https://sketchfab.com/3d-models/game-ready-fn-fall-74182b1fb06944989591bdc4931bbeaa
+
+HnK-33 = 
+https://sketchfab.com/3d-models/hk-g3-of-some-description-df987cb529fe4c7ba2dc643e649143bc
+https://sketchfab.com/3d-models/hk-g3-rifle-game-ready-2cd63366353b4e8fbc9eff81b1fe922f
+
+AKWa2 = https://sketchfab.com/3d-models/ak74m-assault-rifle-8eea0d04d81b4476bb36bf7e6cfc389c
+SKAR-L = https://sketchfab.com/3d-models/fn-scar-17-2de2a57a36c74b448bea0c5c2302d2e9
+G36c = https://sketchfab.com/3d-models/g36c-folded-stock-16e6917f36b14412b1244b7846805574
+
+NEGEV = https://sketchfab.com/3d-models/sakin-mg38-negev-codmwii-49785b255153478496167012d8328a34
+M249 = https://sketchfab.com/3d-models/lmg-8c24d7374ea64bdab1c30f49c69d5ed8
+AMELI MG = https://sketchfab.com/3d-models/mg42-325abbe1c6614dd58480db5557c4c7a2
+HEAVY-16 = https://sketchfab.com/3d-models/m16a4-0feecb7008d743d0bd469816a8b12c17
+
+and many others for additional parts
+

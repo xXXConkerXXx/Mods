@@ -1,0 +1,129 @@
+<addnew>
+
+	<append xpath="/recipes">
+
+
+	<recipe name="IZYammo556mmBulletBall" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceBulletTip" count="1"/>
+		<ingredient name="resourceScrapIron" count="1"/>
+		<ingredient name="resourceGunPowder" count="2"/>
+		<ingredient name="resourceBulletCasing" count="1"/>
+	</recipe>
+	
+	<recipe name="IZYammo556mmArmorpiercing" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceBulletTip" count="1"/>
+		<ingredient name="resourceScrapIron" count="4"/>
+		<ingredient name="resourceGunPowder" count="3"/>
+		<ingredient name="resourceBulletCasing" count="1"/>
+	</recipe>
+	
+	<recipe name="IZYammo556mmHighPower" count="1" craft_area="workbench" tags="workbenchCrafting">
+		<ingredient name="resourceBulletTip" count="1"/>
+		<ingredient name="resourceScrapIron" count="1"/>
+		<ingredient name="resourceGunPowder" count="4"/>
+		<ingredient name="resourceBulletCasing" count="1"/>
+	</recipe>
+
+	<recipe name="IZYgunT1assaultrifleTacticalCarbineCAR15" count="1" craft_area="workbench" tags="learnable,perkMachineGunner">
+		<ingredient name="gunMGT1AK47Parts" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+		<ingredient name="resourceDuctTape" count="2"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceSpring" count="2"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunMGT1AK47Parts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+
+	<recipe name="IZYgunT1assaultrifleBattleCarbineFNLcal" count="1" craft_area="workbench" tags="learnable,perkMachineGunner">
+		<ingredient name="gunMGT1AK47Parts" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+		<ingredient name="resourceDuctTape" count="2"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceSpring" count="2"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunMGT1AK47Parts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT1LMGIWINegev" count="1" craft_area="workbench" tags="learnable,perkMachineGunner">
+		<ingredient name="gunMGT1AK47Parts" count="1"/>
+		<ingredient name="resourceForgedIron" count="10"/>
+		<ingredient name="resourceDuctTape" count="2"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceSpring" count="2"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunMGT1AK47Parts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+
+	<recipe name="IZYgunT2assaultrifleTacticalCarbineM4C" count="1" craft_area="workbench" tags="learnable,perkMachineGunner">
+		<ingredient name="gunMGT1AK47Parts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="10"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceSpring" count="3"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunMGT1AK47Parts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+
+	<recipe name="IZYgunT2assaultrifleBattleCarbineHK33" count="1" craft_area="workbench" tags="learnable,perkMachineGunner">
+		<ingredient name="gunMGT1AK47Parts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="10"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceSpring" count="3"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunMGT1AK47Parts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT2LMGM249" count="1" craft_area="workbench" tags="learnable,perkMachineGunner">
+		<ingredient name="gunMGT1AK47Parts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="10"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="5"/>
+		<ingredient name="resourceSpring" count="3"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunMGT1AK47Parts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+
+	<recipe name="IZYgunT3assaultrifleBattleCarbineAKWa2" count="1" craft_area="workbench" tags="learnable,perkMachineGunner">
+		<ingredient name="gunMGT1AK47Parts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="20"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceSpring" count="4"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunMGT1AK47Parts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+
+	<recipe name="IZYgunT3assaultrifleTacticalCarbineSOCmk1" count="1" craft_area="workbench" tags="learnable,perkMachineGunner">
+		<ingredient name="gunMGT1AK47Parts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="20"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceSpring" count="4"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunMGT1AK47Parts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	<recipe name="IZYgunT3LMGAmeliMG" count="1" craft_area="workbench" tags="learnable,perkMachineGunner">
+		<ingredient name="gunMGT1AK47Parts" count="1"/>
+		<ingredient name="resourceForgedSteel" count="20"/>
+		<ingredient name="resourceDuctTape" count="3"/>
+		<ingredient name="resourceScrapPolymers" count="10"/>
+		<ingredient name="resourceSpring" count="4"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunMGT1AK47Parts,resourceForgedSteel,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+		</effect_group>
+	</recipe>
+	
+	</append>
+
+
+</addnew>

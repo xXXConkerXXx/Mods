@@ -1,0 +1,24 @@
+<configs>
+
+<append xpath="/blocks">
+	
+<block name="IZYPoster762PACKmap">
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="IZYPoster762PACKmap" />
+	<property name="ModelOffset" value=".01,0,0"/>
+	<property name="EconomicValue" value="1"/>
+	<property name="Material" value="Mpaper"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/IZY762PACKPOSTER.unity3d?IZY762PACKPOSTER_gunmap.Prefab"/>
+	<property name="MultiBlockDim" value="1,1,1"/>
+	<property name="Collide" value="movement,melee"/>
+	<property name="WaterFlow" value="permitted"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="CanPickup" value="true"/>
+	<drop event="Destroy" name="IZYPoster762PACKmap" count="1"/>
+	<drop event="Fall" count="0" prob="0"/>
+	<property name="FilterTags" value="MC_building,SC_decor,A21_NEW"/>
+</block>
+
+</append>
+</configs>

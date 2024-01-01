@@ -1,0 +1,41 @@
+<configs>
+
+		<!--	GUN_TRADER	-->
+		
+	<append xpath="//trader_item_group[@name='groupRangedAll']">
+		<item name="IZYgunT1assaultrifleTacticalCarbineCAR15" quality="2,5" />
+		<item name="IZYgunT1assaultrifleBattleCarbineFNLcal" quality="2,5" />
+		<item name="IZYgunT1LMGIWINegev" quality="2,5" />
+		<item name="IZYgunT2assaultrifleTacticalCarbineM4C" quality="2,5" />
+		<item name="IZYgunT2assaultrifleBattleCarbineHK33" quality="2,5" />
+		<item name="IZYgunT2LMGM249" quality="2,5" />
+		<item name="IZYgunT3assaultrifleBattleCarbineAKWa2" quality="2,5" />
+		<item name="IZYgunT3assaultrifleTacticalCarbineSOCmk1" quality="2,5" />
+		<item name="IZYgunT3LMGAmeliMG" quality="2,5" />
+		<item name="IZYgunT4assaultrifleBattleCarbineScarLight" quality="2,5" prob="0.2"/>
+		<item name="IZYgunT4assaultrifleTacticalCarbineG36cA1" quality="2,5" prob="0.2"/>
+		<item name="IZYgunT4LMGHeavy16" quality="2,5" prob="0.2"/>
+		
+	</append>
+	
+		<!--	AMMO_TRADER	-->
+		
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoBrass']">
+		<item name="IZYammo556mmBulletBall" count="25,110"/>
+	</append>
+	
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoHP']">
+		<item name="IZYammo556mmHighPower" count="20,100"/>
+	</append>
+	
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoAP']">
+		<item name="IZYammo556mmArmorpiercing" count="20,100"/>
+	</append>
+	
+	<append xpath="/traders/trader_item_groups/trader_item_group[@name='ammoAll']">
+		<item name="IZYammo556mmBulletBall" count="25,110"/>
+		<item name="IZYammo556mmArmorpiercing" count="20,100"/>
+		<item name="IZYammo556mmHighPower" count="20,100"/>
+	</append>
+
+</configs>	
